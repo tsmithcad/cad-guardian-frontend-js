@@ -1,0 +1,36 @@
+{
+  "annual": [
+    {
+      "plan": "Starter",
+      "price": "$190/y",
+      "features": ["1 User", "1 App", "Integrations"]
+    },
+    {
+      "plan": "Pro",
+      "price": "$50,000/y",
+      "features": ["All in Starter plan", "Google Ads", "SSO via Google", "API access"]
+    },
+    {
+      "plan": "Enterprise",
+      "price": "$100,000/y",
+      "features": ["All features", "Email support", "Google Ads", "SSO via Google", "API access", "Facebook Ads"]
+    }
+  ],
+  "monthly": [
+    {
+      "plan": "Starter",
+      "price": "$22/mo",
+      "features": ["1 User", "1 App", "Integrations"]
+    },
+    {
+      "plan": "Pro",
+      "price": "$4,200/mo",
+      "features": ["All in Starter plan", "Google Ads", "SSO via Google", "API access"]
+    },
+    {
+      "plan": "Enterprise",
+      "price": "$8,333/mo",
+      "features": ["All features", "Email support", "Google Ads", "SSO via Google", "API access", "Facebook Ads"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+	{
+		"muiIcon": "AssessmentIcon",
+		"title": "Planning and Requirements Analysis",
+		"subtitle": "Define the scope and purpose of the project.",
+		"description": "Conduct feasibility studies, identify project goals and deliverables, collect and document functional and non-functional requirements, and create a project plan with timelines and resources."
+	},
+	{
+		"muiIcon": "ArchitectureIcon",
+		"title": "System Design",
+		"subtitle": "Translate requirements into a detailed system architecture and design.",
+		"description": "Design system architecture, create detailed design specifications for each system component, and define data models, interfaces, and integration points."
+	},
+	{
+		"muiIcon": "BuildIcon",
+		"title": "Implementation (Coding)",
+		"subtitle": "Develop the software according to the design specifications.",
+		"description": "Set up development environments, write code for different modules and components, and conduct unit testing."
+	},
+	{
+		"muiIcon": "BugReportIcon",
+		"title": "Testing",
+		"subtitle": "Ensure the software functions correctly and meets the requirements.",
+		"description": "Conduct various levels of testing (e.g., integration testing, system testing, user acceptance testing), identify and fix defects, and validate that the software meets all specified requirements."
+	},
+	{
+		"muiIcon": "PublishIcon",
+		"title": "Deployment",
+		"subtitle": "Deploy the software to the production environment.",
+		"description": "Prepare deployment environments, deploy the software to production, and perform final validation and testing in the production environment."
+	},
+	{
+		"muiIcon": "SupportAgentIcon",
+		"title": "Maintenance and Support",
+		"subtitle": "Provide ongoing support and maintenance for the software.",
+		"description": "Monitor the software for issues, provide support and resolve any bugs or defects, and implement updates and improvements as needed."
+	}
+]

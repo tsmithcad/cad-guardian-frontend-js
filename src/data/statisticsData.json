@@ -1,0 +1,27 @@
+[
+    {
+      "muiIcon": "SchoolIcon",
+      "count": "1000+",
+      "title": "Online Courses",
+      "description": "Choose from over 1000+ online video courses."
+    },
+    {
+      "muiIcon": "GroupIcon",
+      "count": "800+",
+      "title": "Expert Instructors",
+      "description": "Expert instructors to make sure courses are well."
+    },
+    {
+      "muiIcon": "PersonIcon",
+      "count": "100K+",
+      "title": "Active Students",
+      "description": "100K+ active students around the world."
+    },
+    {
+      "muiIcon": "BookIcon",
+      "count": "400+",
+      "title": "Free Resources",
+      "description": "Free resources for all students around the world."
+    }
+  ]
+  

@@ -1,0 +1,16 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+/* src/index.css or src/App.css */
+:root {
+  --svg-color: #000000;
+}
+
+[data-theme='dark'] {
+  --svg-color: #ffffff;
+}
+
+[data-theme='light'] {
+  --svg-color: #000000;
+}

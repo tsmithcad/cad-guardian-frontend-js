@@ -1,0 +1,135 @@
+[
+  {
+    "name": "U.S. Department of Defense",
+    "purpose": "Maintain compliance and accuracy in defense-related CAD documentation.",
+    "category": "Government",
+    "industry": "Defense",
+    "financialValue": "$700B"
+  },
+  {
+    "name": "Toyota",
+    "purpose": "Maintain high standards in their automotive manufacturing.",
+    "category": "Public",
+    "industry": "Automotive",
+    "financialValue": "$275B"
+  },
+  {
+    "name": "Ford",
+    "purpose": "Enhance vehicle design and production workflows.",
+    "category": "Public",
+    "industry": "Automotive",
+    "financialValue": "$136B"
+  },
+  {
+    "name": "Tesla",
+    "purpose": "Innovate design processes while maintaining accuracy and compliance.",
+    "category": "Public",
+    "industry": "Automotive",
+    "financialValue": "$94B"
+  },
+  {
+    "name": "Siemens",
+    "purpose": "Manage complex CAD documents across diverse industrial and engineering projects.",
+    "category": "Public",
+    "industry": "Engineering",
+    "financialValue": "$95B"
+  },
+  {
+    "name": "Airbus",
+    "purpose": "Ensure compliance in aerospace engineering documents.",
+    "category": "Public",
+    "industry": "Aerospace",
+    "financialValue": "$85B"
+  },
+  {
+    "name": "Boeing",
+    "purpose": "Validate detailed aerospace design documents.",
+    "category": "Public",
+    "industry": "Aerospace",
+    "financialValue": "$81B"
+  },
+  {
+    "name": "General Electric (GE)",
+    "purpose": "Streamline document management in extensive industrial projects.",
+    "category": "Public",
+    "industry": "Industrial",
+    "financialValue": "$74B"
+  },
+  {
+    "name": "Lockheed Martin",
+    "purpose": "Maintain precision in defense and aerospace manufacturing.",
+    "category": "Public",
+    "industry": "Defense",
+    "financialValue": "$67B"
+  },
+  {
+    "name": "Caterpillar",
+    "purpose": "Improve machinery design and production accuracy.",
+    "category": "Public",
+    "industry": "Machinery",
+    "financialValue": "$56B"
+  },
+  {
+    "name": "Ministry of Defence (UK)",
+    "purpose": "Streamline document management in defense engineering projects.",
+    "category": "Government",
+    "industry": "Defense",
+    "financialValue": "£50B"
+  },
+  {
+    "name": "John Deere",
+    "purpose": "Enhance compliance in agricultural and construction equipment manufacturing.",
+    "category": "Public",
+    "industry": "Agricultural",
+    "financialValue": "$44B"
+  },
+  {
+    "name": "Mitsubishi Heavy Industries",
+    "purpose": "Manage engineering documents across diverse projects.",
+    "category": "Public",
+    "industry": "Engineering",
+    "financialValue": "$37B"
+  },
+  {
+    "name": "Honeywell",
+    "purpose": "Validate detailed engineering and manufacturing documents.",
+    "category": "Public",
+    "industry": "Manufacturing",
+    "financialValue": "$34B"
+  },
+  {
+    "name": "3M",
+    "purpose": "Ensure accuracy in product design and manufacturing.",
+    "category": "Public",
+    "industry": "Manufacturing",
+    "financialValue": "$32B"
+  },
+  {
+    "name": "Schneider Electric",
+    "purpose": "Improve efficiency in electrical and automation solutions.",
+    "category": "Public",
+    "industry": "Electrical",
+    "financialValue": "$30B"
+  },
+  {
+    "name": "ABB",
+    "purpose": "Streamline document management in industrial automation projects.",
+    "category": "Public",
+    "industry": "Industrial Automation",
+    "financialValue": "$29B"
+  },
+  {
+    "name": "NASA",
+    "purpose": "Ensure precision in aerospace engineering and research documents.",
+    "category": "Government",
+    "industry": "Aerospace",
+    "financialValue": "$24B"
+  },
+  {
+    "name": "European Space Agency (ESA)",
+    "purpose": "Validate and manage documents for aerospace projects.",
+    "category": "Government",
+    "industry": "Aerospace",
+    "financialValue": "€7B"
+  }
+]

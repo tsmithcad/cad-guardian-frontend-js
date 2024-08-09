@@ -1,0 +1,37 @@
+[
+    {
+      "category": "BUSINESS",
+      "items": [
+        { "label": "Transactions", "muiIcon": "ReceiptIcon", "path": "/transactions" },
+        { "label": "Customers", "muiIcon": "GroupIcon", "path": "/customers" },
+        { "label": "Income", "muiIcon": "AttachMoneyIcon", "path": "/income" },
+        { "label": "Transfers", "muiIcon": "SwapHorizIcon", "path": "/transfers" }
+      ]
+    },
+    {
+      "category": "SELECT TOOLS",
+      "items": [
+        { "label": "Payment systems", "muiIcon": "CreditCardIcon", "path": "/payment-systems" },
+        { "label": "Invoices", "muiIcon": "DescriptionIcon", "path": "/invoices" },
+        { "label": "Plans", "muiIcon": "AssessmentIcon", "path": "/plans" },
+        { "label": "Subscriptions", "muiIcon": "NotificationsIcon", "path": "/subscriptions" }
+      ]
+    },
+    {
+      "category": "SETTINGS",
+      "items": [
+        { "label": "System", "muiIcon": "SettingsIcon", "path": "/system" },
+        { "label": "General", "muiIcon": "BuildIcon", "path": "/general" },
+        { "label": "Security", "muiIcon": "SecurityIcon", "path": "/security" },
+        { "label": "Notifications", "muiIcon": "NotificationsIcon", "path": "/notifications" }
+      ]
+    },
+    {
+      "category": "SUPPORT",
+      "items": [
+        { "label": "Support", "muiIcon": "SupportIcon", "path": "/support" },
+        { "label": "Announcements", "muiIcon": "AnnouncementIcon", "path": "/announcements" }
+      ]
+    }
+  ]
+  

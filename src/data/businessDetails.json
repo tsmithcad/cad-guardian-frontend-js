@@ -1,0 +1,12 @@
+{
+    "phone": "+39 34 111 222",
+    "email": "hi@maccarianaagency.com",
+    "address": {
+      "streetAddress": "Via E. Gola 4",
+      "city": "Milan",
+      "state": "MI",
+      "postalCode": "20144",
+      "country": "Italy"
+    }
+  }
+  

@@ -1,0 +1,25 @@
+[
+    {
+      "rating": 5,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "photo": "clara.jpg",
+      "name": "Clara Bertoletto",
+      "role": "MUI lover"
+    },
+    {
+      "rating": 5,
+      "text": "Excepteur sint occaecat cupidatat non proident.",
+      "photo": "jhon.jpg",
+      "name": "Jhon Anderson",
+      "role": "Senior Frontend Developer",
+      "highlighted": true
+    },
+    {
+      "rating": 5,
+      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "photo": "chary.jpg",
+      "name": "Chary Smith",
+      "role": "SEO at Comoti"
+    }
+  ]
+  
