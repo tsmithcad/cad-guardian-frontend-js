@@ -7,7 +7,7 @@ const Footer = () => (
     <hr/>
 
     <Typography variant="body2" color="textSecondary">
-      &copy; theFront. 2021, Maccarian. All rights reserved
+      &copy; CadGuardian. 2024, Complimentary Intelligence. All rights reserved
     </Typography>
 
     <Typography variant="body2" color="textSecondary">
