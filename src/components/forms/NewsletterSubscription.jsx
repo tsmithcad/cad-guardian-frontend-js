@@ -14,7 +14,7 @@ const NewsletterSubscription = () => {
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Subscribe to my newsletter
+        Newsletter
       </Typography>
       <Typography variant="body1" gutterBottom sx={{ color: '#6c757d' }}>
         Don't lose a chance to be among the firsts to know about my upcoming news and updates.

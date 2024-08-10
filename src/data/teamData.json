@@ -1,32 +1,12 @@
 [
     {
-      "name": "Clara Bertoletti",
-      "role": "Junior Designer",
+      "name": "Thomas Smith II",
+      "role": "Founder, Sole Developer",
       "image": "path/to/image1.jpg",
       "socials": {
-        "LinkedIn": "https://linkedin.com/in/clarabertoletti",
-        "YouTube": "",
-        "GitHub": "https://github.com/clarabertoletti"
-      }
-    },
-    {
-      "name": "Jhon Anderson",
-      "role": "Senior Frontend Developer",
-      "image": "path/to/image2.jpg",
-      "socials": {
-        "LinkedIn": "",
-        "YouTube": "https://youtube.com/c/jhonanderson",
-        "GitHub": ""
-      }
-    },
-    {
-      "name": "Chary Smith",
-      "role": "SEO at Comoti",
-      "image": "path/to/image3.jpg",
-      "socials": {
-        "LinkedIn": "https://linkedin.com/in/charysmith",
-        "YouTube": "",
-        "GitHub": "https://github.com/charysmith"
+        "LinkedIn": "https://linkedin.com/in/tsmithcad",
+        "YouTube": "https://youtube.com/@tsmithcad",
+        "GitHub": "https://github.com/tsmithcad"
       }
     }
   ]

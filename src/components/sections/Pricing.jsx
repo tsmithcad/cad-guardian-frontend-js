@@ -36,7 +36,7 @@ const Pricing = () => {
 					boxShadow: 3,
 				}}>
 				<Typography variant="h4" gutterBottom>
-					Flexible pricing options
+					Pricing
 				</Typography>
 				<Typography variant="body1" gutterBottom>
 					We are founded by a leading academic and researcher in the field of

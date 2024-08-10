@@ -2,7 +2,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const lightThemeColors = {
-  primary: '#1976d2',
+  primary: '#000000',
   secondary: '#dc004e',
   background: '#F5F5F7',
   text: '#000000',
@@ -15,7 +15,7 @@ const lightThemeColors = {
 };
 
 const darkThemeColors = {
-  primary: '#90caf9',
+  primary: '#000000',
   secondary: '#f48fb1',
   background: '#121212',
   text: '#ffffff',

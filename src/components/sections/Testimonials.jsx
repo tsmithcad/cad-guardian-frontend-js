@@ -42,10 +42,10 @@ const Testimonials = () => {
   return (
     <Box sx={{ borderRadius: 4, padding: 4, marginTop: 8, boxShadow: 3, }}>
       <Typography variant="h4" textAlign="center" gutterBottom>
-        Rated 5 out of 5 stars by my clients!
+        Testimonials
       </Typography>
       <Typography variant="body1" textAlign="center" gutterBottom>
-        Companies from across the globe have had fantastic experiences using theFront.
+        Companies from across the globe have had fantastic experiences.
         Here’s what they have to say.
       </Typography>
       <Grid container sx={{marginTop:2}} spacing={2} justifyContent="center">

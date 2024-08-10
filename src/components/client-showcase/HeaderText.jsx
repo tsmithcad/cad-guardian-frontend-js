@@ -10,7 +10,7 @@ const HeaderText = () => (
 		}}>
 
 		<Typography variant="h5" gutterBottom>
-			Client history
+			Clients
 		</Typography>
 
 		<Typography variant="body2" color="textSecondary">

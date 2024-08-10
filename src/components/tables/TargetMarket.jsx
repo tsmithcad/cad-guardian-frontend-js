@@ -11,6 +11,8 @@ import {
 	TextField,
 	Typography,
 	Paper,
+	useMediaQuery,
+	useTheme,
 } from "@mui/material";
 import targetMarketData from "../../data/targetMarketData.json";
 
@@ -19,6 +21,9 @@ const TargetMarket = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [order, setOrder] = useState("");
 	const [orderBy, setOrderBy] = useState("");
+
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 	useEffect(() => {
 		setCustomers(targetMarketData);
@@ -59,8 +64,8 @@ const TargetMarket = () => {
 				boxShadow: 3,
 				borderRadius: 2,
 			}}>
-			<Typography variant="h5" sx={{marginBottom:2}}>
-				Target Market Overview
+			<Typography variant="h4" sx={{ marginBottom: 2, textAlign: "center" }}>
+				Market
 			</Typography>
 			<Typography variant="body2" color="textSecondary" gutterBottom>
 				A comprehensive market analysis highlights a significant opportunity
@@ -79,7 +84,12 @@ const TargetMarket = () => {
 					value={searchQuery}
 				/>
 			</Box>
-			<TableContainer component={Paper} sx={{ height: 400 }}>
+			{isMobile && (
+				<Typography variant="caption" color="textSecondary" sx={{ marginBottom: 2 }}>
+					Note: Information simplified for mobile view.
+				</Typography>
+			)}
+			<TableContainer component={Paper} sx={{ height: 500 }}>
 				<Table stickyHeader>
 					<TableHead>
 						<TableRow>
@@ -99,22 +109,26 @@ const TargetMarket = () => {
 									Purpose
 								</TableSortLabel>
 							</TableCell>
-							<TableCell>
-								<TableSortLabel
-									active={orderBy === "category"}
-									direction={orderBy === "category" ? order : "asc"}
-									onClick={() => handleRequestSort("category")}>
-									Category
-								</TableSortLabel>
-							</TableCell>
-							<TableCell>
-								<TableSortLabel
-									active={orderBy === "industry"}
-									direction={orderBy === "industry" ? order : "asc"}
-									onClick={() => handleRequestSort("industry")}>
-									Industry
-								</TableSortLabel>
-							</TableCell>
+							{!isMobile && (
+								<TableCell>
+									<TableSortLabel
+										active={orderBy === "category"}
+										direction={orderBy === "category" ? order : "asc"}
+										onClick={() => handleRequestSort("category")}>
+										Category
+									</TableSortLabel>
+								</TableCell>
+							)}
+							{!isMobile && (
+								<TableCell>
+									<TableSortLabel
+										active={orderBy === "industry"}
+										direction={orderBy === "industry" ? order : "asc"}
+										onClick={() => handleRequestSort("industry")}>
+										Industry
+									</TableSortLabel>
+								</TableCell>
+							)}
 							<TableCell>
 								<TableSortLabel>Value (2024)</TableSortLabel>
 							</TableCell>
@@ -125,8 +139,8 @@ const TargetMarket = () => {
 							<TableRow key={index}>
 								<TableCell>{customer.name}</TableCell>
 								<TableCell>{customer.purpose}</TableCell>
-								<TableCell>{customer.category}</TableCell>
-								<TableCell>{customer.industry}</TableCell>
+								{!isMobile && <TableCell>{customer.category}</TableCell>}
+								{!isMobile && <TableCell>{customer.industry}</TableCell>}
 								<TableCell>{customer.financialValue}</TableCell>
 							</TableRow>
 						))}

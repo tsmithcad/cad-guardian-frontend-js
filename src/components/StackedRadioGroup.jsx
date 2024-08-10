@@ -55,7 +55,7 @@ const StackedRadioGroup = () => {
       }}
     >
       <Typography variant="h5" gutterBottom>
-        Choose the plan
+        Choose server
       </Typography>
       <RadioGroup value={selectedPlan} onChange={handleChange}>
         {plansData.map((plan, index) => (
@@ -81,13 +81,13 @@ const StackedRadioGroup = () => {
                       {plan.specs}
                     </Typography>
                   </Box>
-                  <Box sx={{ marginLeft: 20, textAlign: 'right', justifyContent: 'flex-end', }}>
-                    <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                  <Box sx={{  textAlign: 'right', justifyContent: 'flex-end', }}>
+                    {/* <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                       {plan.price}
                     </Typography>
                     <Typography variant="caption" color="textSecondary">
                       {plan.interval}
-                    </Typography>
+                    </Typography> */}
                   </Box>
                 </Box>
               }
