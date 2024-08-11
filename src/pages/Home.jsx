@@ -13,6 +13,7 @@ import Journey from "../components/Journey";
 import Pricing from "../components/sections/Pricing";
 import StackedRadioGroup from "../components/StackedRadioGroup";
 import Contact from "../components/sections/Contact";
+import Features from "../components/sections//Features";
 
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
@@ -23,7 +24,8 @@ const Home = () => (
 		<Subscribe />
 		<TargetMarket />
 		<Team />
-		<Statistics />
+		{/* <Statistics /> */}
+		<Features  />
 		<Process />
 		<Testimonials />
 		<Journey />

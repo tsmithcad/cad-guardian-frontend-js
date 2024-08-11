@@ -56,22 +56,23 @@ const Team = () => {
 
   return (
     <Container>
-      <Box sx={{ textAlign: 'center', my: 8 }}>
+      <Box sx={{ textAlign: 'center', my: 4 }}>
         <Typography variant="h4" gutterBottom>
           Team
         </Typography>
         <Typography variant="body1" color="textSecondary" gutterBottom>
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          
         </Typography>
-        <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-          View all
-        </Button>
+       
       </Box>
       <Grid container spacing={4} justifyContent="center">
         {team.map((member, index) => (
           <TeamMemberCard key={index} {...member} />
         ))}
       </Grid>
+      {/* <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+          View all
+        </Button> */}
     </Container>
   );
 };

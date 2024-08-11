@@ -1,0 +1,26 @@
+[
+    {
+      "muiIcon": "CameraAltIcon",
+      "count": "Capture",
+      "title": "500+",
+      "description": "Capture high-quality images and videos effortlessly."
+    },
+    {
+      "muiIcon": "UploadFileIcon",
+      "count": "Upload File",
+      "title": "3000+",
+      "description": "Seamlessly upload your files with our secure system."
+    },
+    {
+      "muiIcon": "ExploreIcon",
+      "count": "Explorer",
+      "title": "2000+",
+      "description": "Explore numerous possibilities within the platform."
+    },
+    {
+      "muiIcon": "FindInPageIcon",
+      "count": "Finder",
+      "title": "1500+",
+      "description": "Find and organize your content with ease."
+    }
+]

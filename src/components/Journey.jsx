@@ -14,11 +14,9 @@ import {
 
 const Step1 = () => (
   <div>
-    <h2>Select campaign settings</h2>
+    <h2>Select journey settings</h2>
     <p>
-      For each ad campaign that you create, you can control how much you're
-      willing to spend on clicks and conversions, which networks and
-      geographical locations you want your ads to show on, and more.
+      For each ai training form you submit, you can control international projects, and more.
     </p>
   </div>
 );
@@ -73,7 +71,7 @@ const Journey = () => {
         }}
       >
         <Typography variant="h5" gutterBottom>
-          Campaign Setup
+          Journey
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
           Follow these steps to create and configure your ad campaign.

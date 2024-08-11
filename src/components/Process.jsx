@@ -64,7 +64,7 @@ const Process = () => {
 
   return (
     <Container sx={{ mt: 4}}>
-      <Typography variant="h4" sx={{ textAlign: "center" }} gutterBottom>My Software Development Process</Typography>
+      <Typography variant="h4" sx={{ textAlign: "center" }} gutterBottom>Process</Typography>
       <Grid container direction="column">
         {processSteps.map(({ muiIcon, title, subtitle, description }, index) => {
           const IconComponent = iconMap[muiIcon];
