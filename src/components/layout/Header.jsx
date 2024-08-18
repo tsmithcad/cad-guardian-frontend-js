@@ -12,7 +12,7 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 			sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
 			<Toolbar>
 				<IconButton
-					color="#000000"
+					color="#ffffff"
 					aria-label="open drawer"
 					edge="start"
 					onClick={handleDrawerToggle}

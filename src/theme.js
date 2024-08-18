@@ -1,4 +1,3 @@
-// src/theme.js
 import { createTheme } from '@mui/material/styles';
 
 const lightThemeColors = {
@@ -7,11 +6,14 @@ const lightThemeColors = {
   background: '#F5F5F7',
   text: '#000000',
   button: '#000000',
-  buttonText: '#ffffff', // Text color for filled button
-  buttonOutlineText: '#1976d2', // Text color for outlined button
+  buttonText: '#ffffff',
+  buttonOutlineText: '#1976d2',
   card: '#ffffff',
   cardBorder: '#cccccc',
-  svg: '#000000', // SVG color for light mode
+  svg: '#000000',
+  link: '#000000',          // Link color for light mode
+  linkHover: '#1565c0',     // Link hover color for light mode
+  linkVisited: '#5c6bc0',   // Link visited color for light mode
 };
 
 const darkThemeColors = {
@@ -20,11 +22,14 @@ const darkThemeColors = {
   background: '#121212',
   text: '#ffffff',
   button: '#676767',
-  buttonText: '#121212', // Text color for filled button
-  buttonOutlineText: '#676767', // Text color for outlined button
+  buttonText: '#ffffff',
+  buttonOutlineText: '#676767',
   card: '#1e1e1e',
   cardBorder: '#444444',
-  svg: '#ffffff', // SVG color for dark mode
+  svg: '#ffffff',
+  link: '#676767',          // Link color for dark mode
+  linkHover: '#64b5f6',     // Link hover color for dark mode
+  linkVisited: '#42a5f5',   // Link visited color for dark mode
 };
 
 const lightTheme = createTheme({
@@ -70,6 +75,19 @@ const lightTheme = createTheme({
       styleOverrides: {
         root: {
           borderColor: lightThemeColors.cardBorder,
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: lightThemeColors.link,
+          '&:hover': {
+            color: lightThemeColors.linkHover,
+          },
+          '&:visited': {
+            color: lightThemeColors.linkVisited,
+          },
         },
       },
     },
@@ -120,6 +138,19 @@ const darkTheme = createTheme({
       styleOverrides: {
         root: {
           borderColor: darkThemeColors.cardBorder,
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: darkThemeColors.link,
+          '&:hover': {
+            color: darkThemeColors.linkHover,
+          },
+          '&:visited': {
+            color: darkThemeColors.linkVisited,
+          },
         },
       },
     },

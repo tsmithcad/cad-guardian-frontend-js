@@ -3,7 +3,7 @@ import React from "react";
 
 // components
 import Clients from "../components/client-showcase/Clients";
-import Subscribe from "../components/forms/NewsletterSubscription";
+import Subscribe from "../components/NewsletterSubscription";
 import TargetMarket from "../components/tables/TargetMarket";
 import Team from "../components/sections/Team";
 import Statistics from "../components/sections/Statistics";
@@ -15,13 +15,19 @@ import StackedRadioGroup from "../components/StackedRadioGroup";
 import Contact from "../components/sections/Contact";
 import Features from "../components/sections//Features";
 
+// services
+import FormBuilder from "../services/form-builder/FormBuilder";
+import FeatureAccordion from "../services/form-builder/FeatureAccordion";
+
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
-import { Typography } from "@mui/material";
+import { List, Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-	<Typography  textAlign={"center"} sx={{mt:4,fontWeight: 'bold',}}>Under Construction</Typography>
+	<Typography  textAlign={"center"} sx={{m:4,fontWeight: 'bold',}}>Under Construction</Typography>
+
+	<FormBuilder/>
 		{/* <Features  /> */}
 		{/* <Clients /> */}
 		{/* <Subscribe /> */}
