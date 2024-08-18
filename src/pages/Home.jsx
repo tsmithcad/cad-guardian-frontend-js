@@ -17,7 +17,6 @@ import Features from "../components/sections//Features";
 
 // services
 import FormBuilder from "../services/form-builder/FormBuilder";
-import FeatureAccordion from "../services/form-builder/FeatureAccordion";
 
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
