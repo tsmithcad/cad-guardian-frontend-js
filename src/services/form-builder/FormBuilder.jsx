@@ -28,14 +28,14 @@ const FormBuilder = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            AI Form Builder
+            Ai Form Builder
           </Typography>
-          <Button color="inherit" sx={{ marginRight: 2 }} startIcon={<SaveIcon />}>
+          {/* <Button color="inherit" sx={{ marginRight: 2 }} startIcon={<SaveIcon />}>
             Save
           </Button>
           <Button color="inherit" startIcon={<PreviewIcon />}>
             Preview
-          </Button>
+          </Button> */}
         </Toolbar>
       </AppBar>
 
