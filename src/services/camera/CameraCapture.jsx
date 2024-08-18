@@ -85,16 +85,26 @@ const CameraCapture = () => {
         </Select>
       )}
       <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
-        <video ref={videoRef} autoPlay playsInline style={{ width: "100%" }} />
-        <canvas ref={canvasRef} style={{ display: "none" }} />
-        <IconButton
-          color="primary"
-          onClick={handleCapture}
-          sx={{ position: "absolute", bottom: 16, right: 16 }}
-        >
-          <CameraAltIcon />
-        </IconButton>
-      </Box>
+  <video ref={videoRef} autoPlay playsInline style={{ width: "100%", height: "auto" }} />
+  <canvas ref={canvasRef} style={{ display: "none" }} />
+  <IconButton
+    color="primary"
+    onClick={handleCapture}
+    sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      fontSize: "48px",
+      backgroundColor: "rgba(255, 255, 255, 0.7)",
+      '&:hover': {
+        backgroundColor: "rgba(255, 255, 255, 1)",
+      },
+    }}
+  >
+    <CameraAltIcon sx={{ fontSize: "48px" }} />
+  </IconButton>
+</Box>
       {capturedImage && (
         <Box sx={{ mt: 2 }}>
           <Typography variant="h6">Preview:</Typography>
