@@ -24,15 +24,16 @@ const CardGrid = ({ title, subtitle, data, iconMap }) => {
             height: "100%",
           }}
         >
-          <Icon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
-          <Typography variant="h5" sx={{ mt: 1 }}>
-            {count}
+          <Icon sx={{ fontSize: 100, color: theme.palette.text }} />
+          <Typography sx={{  }} variant="body2" color="textSecondary">
+            {description}
           </Typography>
-          <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+          <Typography variant="body2" sx={{mt: 3 }}>
             {title}
           </Typography>
-          <Typography sx={{ height: "100%" }} variant="body2" color="textSecondary">
-            {description}
+          
+          <Typography variant="body2" sx={{ mt: 3 }}>
+            {count}
           </Typography>
         </Box>
       </Card>

@@ -14,7 +14,7 @@ import {
 
 const Step1 = () => (
   <div>
-    <h2>Select journey settings</h2>
+    <h2>Get started</h2>
     <p>
       For each ai training form you submit, you can control international projects, and more.
     </p>
@@ -70,7 +70,7 @@ const Journey = () => {
           mt: 4,
         }}
       >
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Journey
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>

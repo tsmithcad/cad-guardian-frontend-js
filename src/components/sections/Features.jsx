@@ -16,7 +16,7 @@ const iconMap = {
 
 const Features = () => (
   <CardGrid
-    title="Features"
+    title="CAD Features"
     subtitle="Explore a wide range of features designed to enhance your workflow."
     data={featuresData}
     iconMap={iconMap}

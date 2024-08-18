@@ -1,26 +1,26 @@
 [
-    {
-      "muiIcon": "CameraAltIcon",
-      "count": "Capture",
-      "title": "500+",
-      "description": "Capture high-quality images and videos effortlessly."
-    },
-    {
-      "muiIcon": "UploadFileIcon",
-      "count": "Upload File",
-      "title": "3000+",
-      "description": "Seamlessly upload your files with our secure system."
-    },
-    {
-      "muiIcon": "ExploreIcon",
-      "count": "Explorer",
-      "title": "2000+",
-      "description": "Explore numerous possibilities within the platform."
-    },
-    {
-      "muiIcon": "FindInPageIcon",
-      "count": "Finder",
-      "title": "1500+",
-      "description": "Find and organize your content with ease."
-    }
+  {
+    "muiIcon": "CameraAltIcon",
+    "count": ".jpg, .jpeg, .png, .tiff, .bmp, .gif, .pdf, .doc, .docx, .tif, .tiff, .svg, .dxf, .dwg, .eps, .ai",
+    "title": "RFQ, RFI, Initial Concepts, Design Sketches, Site Photos, Whiteboard Images, Meeting Notes, Compliance Requirements, Market Research",
+    "description": "Capture and store essential project documents, initial concepts, and visual data to kickstart your project. Whether it's site photos, design sketches, or critical RFQs, ensure that everything is captured accurately and stored securely."
+  },
+  {
+    "muiIcon": "UploadFileIcon",
+    "count": ".dwg, .dxf, .step, .stp, .iges, .igs, .sat, .3dm, .prt, .sldprt, .sldasm, .stl, .obj, .3ds, .fbx, .dae, .ply, .dwf, .ipt, .iam, .xls, .xlsx, .csv, .ppt, .pptx, .pdf, .nc, .gcode, .cam, .mfg, .xml, .edi, .mp4, .mov, .avi, .wmv, .mp3, .wav",
+    "title": "CAD Submittal Drawings, Shop Drawings, Engineering Documents, BOM, Specifications, Purchase Orders, Sales Orders, Contracts, Invoices, Technical Manuals, Quality Assurance Documents",
+    "description": "Effortlessly upload and manage a wide array of project-critical files, including detailed CAD drawings, engineering documents, BOMs, contracts, and more. Our secure system ensures that all your vital documents are organized and accessible."
+  },
+  {
+    "muiIcon": "ExploreIcon",
+    "count": ".proj, .sln, .vsproj, .workspace, .stl, .obj, .dwg, .dxf, .skp, .rvt, .nwd, .xml, .json, .csv, .xlsx, .ppt, .pptx, .pdf, .doc, .docx",
+    "title": "Project Plans, Design Revisions, Change Orders, Manufacturing Work Orders, Logistics Plans, Project Schedules, Cost Estimates, Risk Assessments, Communication Logs, Stakeholder Presentations",
+    "description": "Navigate through complex projects with ease. Explore, organize, and manage all project-related documents, from initial plans to final designs, ensuring that every aspect of your project is under control and up-to-date."
+  },
+  {
+    "muiIcon": "FindInPageIcon",
+    "count": ".pdf, .xls, .xlsx, .csv, .docx, .sql, .db, .mdb, .accdb, .sqlite, .xml, .json, .txt, .log, .py, .r, .sh",
+    "title": "Compliance Reports, Project Summaries, Cost Analysis, Inventory Reports, Shipping Schedules, Audit Logs, Performance Metrics, ROI Analysis, Incident Reports, Sustainability Reports, Final Deliverables",
+    "description": "Harness the power of advanced search and reporting tools to quickly find, analyze, and generate insights from your data. Whether it's compliance reports or project summaries, our system ensures you have the information you need, when you need it."
+  }
 ]

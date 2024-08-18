@@ -17,23 +17,25 @@ import Features from "../components/sections//Features";
 
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
+import { Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-		<Clients />
-		<Subscribe />
-		<TargetMarket />
-		<Team />
+	<Typography  textAlign={"center"} sx={{mt:4,fontWeight: 'bold',}}>Under Construction</Typography>
+		{/* <Features  /> */}
+		{/* <Clients /> */}
+		{/* <Subscribe /> */}
+		{/* <TargetMarket /> */}
+		{/* <Team /> */}
 		{/* <Statistics /> */}
-		<Features  />
-		<Process />
-		<Testimonials />
-		<Journey />
-		<PricingProvider>
+		{/* <Process /> */}
+		{/* <Testimonials /> */}
+		{/* <Journey /> */}
+		{/* <PricingProvider>
 			<Pricing />
-		</PricingProvider>
-		<StackedRadioGroup />
-		<Contact />
+		</PricingProvider> */}
+		{/* <StackedRadioGroup /> */}
+		{/* <Contact /> */}
 	</>
 );
 

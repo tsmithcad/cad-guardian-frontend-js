@@ -39,10 +39,10 @@ const Contact = () => {
 					{/* Left Section */}
 					<Grid item xs={12} md={6}>
 						<Typography variant="h4" gutterBottom>
-							Get in touch
+							Contact
 						</Typography>
 						<Typography variant="body1" color="textSecondary" gutterBottom>
-							We'd love to talk about how we can help you.
+							I'd love to talk about how I can help you.
 						</Typography>
 						<Box
 							component="iframe"

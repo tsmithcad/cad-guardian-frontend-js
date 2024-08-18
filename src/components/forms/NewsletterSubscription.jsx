@@ -10,7 +10,7 @@ const NewsletterSubscription = () => {
         padding: 4,
         textAlign: 'center',
         boxShadow: 3,
-        borderRadius: '8px'
+        borderRadius: '8px',
       }}
     >
       <Typography variant="h4" gutterBottom>

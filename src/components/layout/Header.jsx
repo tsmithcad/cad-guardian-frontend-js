@@ -20,8 +20,9 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 					<MenuIcon />
 				</IconButton>
 				<Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-					Thomas D Smith II
+					CADGuardian.com
 				</Typography>
+				<Typography variant="body1">Theme</Typography>
 				<Switch checked={isDarkMode} onChange={toggleDarkMode} />
 			</Toolbar>
 		</AppBar>
