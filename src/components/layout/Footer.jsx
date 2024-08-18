@@ -7,7 +7,7 @@ const Footer = () => (
     <hr/>
 
     <Typography variant="body2" color="textSecondary">
-      &copy; CadGuardian. 2024, Complimentary Intelligence. All rights reserved
+      &copy; CadGuardian. 2024, Calculated Technologies LLC. All rights reserved
     </Typography>
 
     <Typography variant="body2" color="textSecondary">
