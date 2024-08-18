@@ -24,7 +24,7 @@ const FormCanvas = ({ formElements, removeFormElement }) => {
   };
 
   return (
-    <Box width={{ xs: '100%', md: '60%' }} p={2}>
+    <Box width={{ xs: '100%', md: '60%' }} p={1}>
       <Typography variant="h6" gutterBottom>
         Form Canvas
       </Typography>

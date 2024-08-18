@@ -11,14 +11,14 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 			position="static"
 			sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
 			<Toolbar>
-				<IconButton
+				{/* <IconButton
 					color="#ffffff"
 					aria-label="open drawer"
 					edge="start"
 					onClick={handleDrawerToggle}
 					sx={{ mr: 2 }}>
 					<MenuIcon />
-				</IconButton>
+				</IconButton> */}
 				<Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
 					CADGuardian.com
 				</Typography>
