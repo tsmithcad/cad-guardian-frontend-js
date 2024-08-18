@@ -9,7 +9,7 @@ const Toolbox = ({ addFormElement, drawerOpen, toggleDrawer }) => (
     <Box
       sx={{
         width: { xs: '100%', md: '20%' },
-        maxHeight: '300px',
+        maxHeight: '450px',
         overflowY: 'auto',
         p: 2,
         display: { xs: 'none', md: 'block' },

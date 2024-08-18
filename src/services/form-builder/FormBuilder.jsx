@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Box, AppBar, Toolbar, Typography, Button } from '@mui/material';
-import { Save as SaveIcon, Preview as PreviewIcon } from '@mui/icons-material';
 
 import Toolbox from './Toolbox';
 import FormCanvas from './FormCanvas';
@@ -30,16 +29,10 @@ const FormBuilder = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Ai Form Builder
           </Typography>
-          {/* <Button color="inherit" sx={{ marginRight: 2 }} startIcon={<SaveIcon />}>
-            Save
-          </Button>
-          <Button color="inherit" startIcon={<PreviewIcon />}>
-            Preview
-          </Button> */}
         </Toolbar>
       </AppBar>
 
-      <Box display="flex" p={2} sx={{ position: 'relative', minHeight: '100vh' }}>
+      <Box display="flex" p={2} sx={{ position: 'relative' }}>
         <Toolbox
           formElements={formElements}
           addFormElement={addFormElement}
