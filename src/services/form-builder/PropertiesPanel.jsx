@@ -10,7 +10,7 @@ const PropertiesPanel = () => (
     }}
   >
     <Typography variant="h6" gutterBottom>
-      Field Properties
+      Properties
     </Typography>
     <Paper variant="outlined" sx={{ minHeight: '400px', p: 2 }}>
       <Typography variant="body2">Select a field to see its properties</Typography>

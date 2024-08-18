@@ -17,6 +17,7 @@ import Features from "../components/sections//Features";
 
 // services
 import FormBuilder from "../services/form-builder/FormBuilder";
+import CameraCapture from "../services/camera/CameraCapture";
 
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
@@ -24,9 +25,13 @@ import { List, Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-	<Typography  textAlign={"center"} sx={{m:4,fontWeight: 'bold',}}>Under Construction</Typography>
+		<Typography textAlign={"center"} sx={{ m: 4, fontWeight: "bold" }}>
+			Under Construction
+		</Typography>
 
-	<FormBuilder/>
+		<CameraCapture />
+
+		{/* <FormBuilder/> */}
 		{/* <Features  /> */}
 		{/* <Clients /> */}
 		{/* <Subscribe /> */}
