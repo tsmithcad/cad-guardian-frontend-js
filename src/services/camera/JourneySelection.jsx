@@ -26,10 +26,10 @@ const JourneySelection = () => {
       borderRadius: 2,
     }}>
       <Typography variant="h4" sx={{ marginBottom: 1, textAlign: "center" }} gutterBottom>
-        Choose your journey
+        Getting started
       </Typography>
       <Typography variant="body2" color="textSecondary" sx={{ textAlign: "center", mt:2, marginBottom:4 }} gutterBottom>
-        Select between object journey or drawing journey.
+        Do you have a object or drawing?
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
