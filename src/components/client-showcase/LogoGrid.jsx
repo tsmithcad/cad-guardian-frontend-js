@@ -26,7 +26,7 @@ const LogoGrid = () => {
         <Grid item key={index}>
           <img
             src={logo.src}
-            style={{ margin: 10, fill: 'var(--svg-color)', width: '30px', height: '30px' }}
+            style={{ margin: 5, fill: 'var(--svg-color)', width: '90px', height: '90px' }}
             alt={logo.name}
           />
         </Grid>

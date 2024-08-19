@@ -10,10 +10,10 @@ const HeaderText = () => (
 		}}>
 
 		<Typography variant="h5" gutterBottom>
-			Clients
+			Former Employer Clients
 		</Typography>
 
-		<Typography variant="body2" color="textSecondary">
+		<Typography variant="h6" color="textSecondary">
 			Over the past decade, I have delivered{" "}
 			<strong>innovative software solutions</strong> and{" "}
 			<strong>precise CAD designs</strong> to leading companies across various

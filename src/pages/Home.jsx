@@ -21,27 +21,27 @@ import CameraCapture from "../services/camera/CameraCapture";
 
 // contexts
 import { PricingProvider } from "../contexts/PricingContext";
-import { List, Typography } from "@mui/material";
+import { colors, List, Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-
-		<CameraCapture />
-		<Statistics />
-		<FormBuilder/>
-		<Features  />
-		<Clients />
-		<Subscribe />
-		<TargetMarket />
+	<Typography sx={{textAlign:"center", fontStyle:"strong", backgroundColor:"pink", color:"blue"}}>"Use Ai to create. From napkin to conception!"</Typography>
 		<Team />
-		<Process />
-		<Testimonials />
-		<Journey />
-		<PricingProvider>
+		<CameraCapture />
+		{/* <Statistics /> */}
+		{/* <FormBuilder/> */}
+		{/* <Features  /> */}
+		<TargetMarket />
+		<Clients />
+		{/* <Subscribe /> */}
+		{/* <Process /> */}
+		{/* <Testimonials /> */}
+		{/* <Journey /> */}
+		{/* <PricingProvider>
 			<Pricing />
-		</PricingProvider>
-		<StackedRadioGroup />
-		<Contact />
+		</PricingProvider> */}
+		{/* <StackedRadioGroup /> */}
+		{/* <Contact /> */}
 	</>
 );
 

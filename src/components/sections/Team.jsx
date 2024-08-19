@@ -57,9 +57,9 @@ const Team = () => {
   return (
     <Container>
       <Box sx={{ textAlign: 'center', my: 4 }}>
-        <Typography variant="h4" gutterBottom>
+        {/* <Typography variant="h4" gutterBottom>
           Team
-        </Typography>
+        </Typography> */}
         <Typography variant="body1" color="textSecondary" gutterBottom>
           
         </Typography>
