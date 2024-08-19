@@ -25,7 +25,17 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 				<Typography variant="body1">Theme</Typography>
 				<Switch checked={isDarkMode} onChange={toggleDarkMode} />
 			</Toolbar>
+			<Typography
+				sx={{
+					textAlign: "center",
+					fontStyle: "strong",
+					backgroundColor: "gray",
+					color: "white",
+				}}>
+				"Use Ai to create. From napkin to conception!"
+			</Typography>
 		</AppBar>
+		
 	);
 };
 

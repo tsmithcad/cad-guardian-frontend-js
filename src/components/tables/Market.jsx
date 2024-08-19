@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import targetMarketData from "../../data/targetMarketData.json";
 
-const TargetMarket = () => {
+const Market = () => {
 	const [customers, setCustomers] = useState([]);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [order, setOrder] = useState("");
@@ -151,4 +151,4 @@ const TargetMarket = () => {
 	);
 };
 
-export default TargetMarket;
+export default Market;

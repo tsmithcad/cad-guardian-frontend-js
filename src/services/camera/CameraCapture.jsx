@@ -58,24 +58,23 @@ const CameraCapture = () => {
 	}, [selectedDeviceId]);
 
 	const handleDeviceChange = async (event) => {
-    if (stream) {
-      stream.getTracks().forEach((track) => track.stop());
-    }
-  
-    const newDeviceId = event.target.value;
-    setSelectedDeviceId(newDeviceId);
-  
-    try {
-      const videoStream = await navigator.mediaDevices.getUserMedia({
-        video: { deviceId: newDeviceId },
-      });
-      videoRef.current.srcObject = videoStream;
-      setStream(videoStream);
-    } catch (error) {
-      console.error("Error switching video stream:", error);
-    }
-  };
-  
+		if (stream) {
+			stream.getTracks().forEach((track) => track.stop());
+		}
+
+		const newDeviceId = event.target.value;
+		setSelectedDeviceId(newDeviceId);
+
+		try {
+			const videoStream = await navigator.mediaDevices.getUserMedia({
+				video: { deviceId: newDeviceId },
+			});
+			videoRef.current.srcObject = videoStream;
+			setStream(videoStream);
+		} catch (error) {
+			console.error("Error switching video stream:", error);
+		}
+	};
 
 	const handleCapture = async () => {
 		const canvas = canvasRef.current;
