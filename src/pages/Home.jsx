@@ -25,23 +25,23 @@ import { List, Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-		<CameraCapture />
 
-		{/* <FormBuilder/> */}
-		{/* <Features  /> */}
-		{/* <Clients /> */}
-		{/* <Subscribe /> */}
-		{/* <TargetMarket /> */}
-		{/* <Team /> */}
-		{/* <Statistics /> */}
-		{/* <Process /> */}
-		{/* <Testimonials /> */}
-		{/* <Journey /> */}
-		{/* <PricingProvider>
+		<CameraCapture />
+		<Statistics />
+		<FormBuilder/>
+		<Features  />
+		<Clients />
+		<Subscribe />
+		<TargetMarket />
+		<Team />
+		<Process />
+		<Testimonials />
+		<Journey />
+		<PricingProvider>
 			<Pricing />
-		</PricingProvider> */}
-		{/* <StackedRadioGroup /> */}
-		{/* <Contact /> */}
+		</PricingProvider>
+		<StackedRadioGroup />
+		<Contact />
 	</>
 );
 
