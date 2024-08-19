@@ -10,9 +10,9 @@ const Footer = () => (
       &copy; CadGuardian. 2024, Calculated Technologies LLC. All rights reserved
     </Typography>
 
-    <Typography variant="body2" color="textSecondary">
+    {/* <Typography variant="body2" color="textSecondary">
       When you visit or interact with our sites, services or tools, we or our authorized service providers may use cookies for storing information to help provide you with a better, faster and safer experience and for marketing purposes.
-    </Typography>
+    </Typography> */}
 
     <Link href="#">Privacy Policy</Link> | <Link href="#">Data Policy</Link> | <Link href="#">Cookie Policy</Link>
   </Box>
