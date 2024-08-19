@@ -25,10 +25,6 @@ import { List, Typography } from "@mui/material";
 
 const Home = () => (
 	<>
-		<Typography textAlign={"center"} sx={{ m: 4, fontWeight: "bold" }}>
-			Under Construction
-		</Typography>
-
 		<CameraCapture />
 
 		{/* <FormBuilder/> */}

@@ -68,35 +68,33 @@ const CameraCapture = () => {
   };
 
   const handleCapture = async () => {
-	const canvas = canvasRef.current;
-	const video = videoRef.current;
-	canvas.width = video.videoWidth;
-	canvas.height = video.videoHeight;
-	const context = canvas.getContext("2d");
-	context.drawImage(video, 0, 0, canvas.width, canvas.height);
-	const capturedImage = canvas.toDataURL("image/png");
-	setCapturedImage(capturedImage);
+  const canvas = canvasRef.current;
+  const video = videoRef.current;
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  const context = canvas.getContext("2d");
+  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  const capturedImage = canvas.toDataURL("image/png");
+  setCapturedImage(capturedImage);
   
-	try {
-	  const response = await fetch('https://cad-guardian-backend-js.vercel.app/summarize', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify({ image: capturedImage }),
-	  });
-	  const data = await response.json();
-	  console.log('Summary:', data.summary);
-	  setSummary(data.summary);
-	} catch (error) {
-	  console.error("Error fetching summary:", error);
-	}
+  try {
+    const response = await fetch('https://cad-guardian-backend-js.vercel.app/summarize', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ image: capturedImage }),
+    });
+    const data = await response.json();
+    console.log('Summary:', data.summary);
+    setSummary(data.summary);
+  } catch (error) {
+    console.error("Error fetching summary:", error);
+  }
   };
   
 
-  const title = "Getting Started";
+  const title = "User Guide";
   const details =
     "Easily capture high-quality images for accurate 3D model creation. The AI-powered backend processes these images to generate detailed 3D models, which can be further analyzed, marked up, and used for automated drawings, BOMs, and marketing materials.";
-
-
 
   return (
     <Box sx={{ textAlign: "center", p: 3 }}>

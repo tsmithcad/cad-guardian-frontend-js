@@ -33,6 +33,11 @@ function App({ toggleDarkMode }) {
 				<Route path="/recover" element={<Recover />} />
 			</Routes>
 
+			<Header
+				handleDrawerToggle={handleDrawerToggle}
+				toggleDarkMode={toggleDarkMode}
+			/>
+
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
 				<NavigationDrawer
@@ -40,16 +45,11 @@ function App({ toggleDarkMode }) {
 					handleDrawerToggle={handleDrawerToggle}
 					drawerWidth={drawerWidth}
 				/>
-				
-					
-					<Container>
-					<Header
-						handleDrawerToggle={handleDrawerToggle}
-						toggleDarkMode={toggleDarkMode}
-					/>
-						<Home />
-						<Footer />
-					</Container>
+
+				<Container>
+					<Home />
+					<Footer />
+				</Container>
 			</Box>
 		</Router>
 	);

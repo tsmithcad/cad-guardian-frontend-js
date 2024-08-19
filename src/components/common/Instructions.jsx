@@ -10,10 +10,10 @@ const Instructions = ({ title, details }) => {
         aria-controls="panel-content"
         id="panel-header"
       >
-        <Typography variant="h6">{title}</Typography>
+        <Typography variant="body1">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>
+        <Typography variant="body2">
           {details}
         </Typography>
       </AccordionDetails>
