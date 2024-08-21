@@ -1,29 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 import {
-  Box,
-  IconButton,
-  MenuItem,
-  Select,
-  Typography,
-  Stepper,
-  Step,
-  StepLabel,
-  Container,
-  useMediaQuery,
-  Button,
-  useTheme,
+	Box,
+	IconButton,
+	MenuItem,
+	Select,
+	Typography,
+	Stepper,
+	Step,
+	StepLabel,
+	Container,
+	useMediaQuery,
+	Button,
+	useTheme,
 } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import UploadFileIcon from "@mui/icons-material/UploadFile";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import BrushIcon from "@mui/icons-material/Brush";
-import PlaceIcon from "@mui/icons-material/Place";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const CameraCapture = ({ title, details, onCapture }) => {
+  const [devices, setDevices] = useState([]);
+  const [selectedDeviceId, setSelectedDeviceId] = useState("");
   const [capturedImage, setCapturedImage] = useState(null);
-  const webcamRef = React.useRef(null);
+  const webcamRef = useRef(null);
+
+  useEffect(() => {
+    const getDevices = async () => {
+      const devices = await navigator.mediaDevices.enumerateDevices();
+      const videoDevices = devices.filter(device => device.kind === "videoinput");
+      setDevices(videoDevices);
+      setSelectedDeviceId(videoDevices[0]?.deviceId || "");
+    };
+
+    getDevices();
+  }, []);
+
+  const handleDeviceChange = (event) => {
+    setSelectedDeviceId(event.target.value);
+  };
 
   const handleCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -33,26 +45,52 @@ const CameraCapture = ({ title, details, onCapture }) => {
 
   return (
     <Box sx={{ textAlign: "center", p: 3 }}>
-      <Webcam
-        audio={false}
-        ref={webcamRef}
-        screenshotFormat="image/png"
-        style={{ width: "100%", height: "auto" }}
-      />
-      <IconButton
-        color="primary"
-        onClick={handleCapture}
-        sx={{
-          position: "relative",
-          fontSize: "48px",
-          backgroundColor: "rgba(255, 255, 255, 0.7)",
-          "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 1)",
-          },
-        }}
-      >
-        <CameraAltIcon sx={{ fontSize: "48px" }} />
-      </IconButton>
+      <Typography variant="h5" gutterBottom>
+        {title}
+      </Typography>
+      <Typography variant="body2" color="textSecondary" gutterBottom>
+        {details}
+      </Typography>
+      {devices.length > 1 && (
+        <Select
+          value={selectedDeviceId}
+          onChange={handleDeviceChange}
+          sx={{ mb: 2 }}
+          fullWidth
+        >
+          {devices.map((device, index) => (
+            <MenuItem key={index} value={device.deviceId}>
+              {device.label || `Camera ${index + 1}`}
+            </MenuItem>
+          ))}
+        </Select>
+      )}
+      <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
+        <Webcam
+          audio={false}
+          ref={webcamRef}
+          videoConstraints={{ deviceId: selectedDeviceId }}
+          screenshotFormat="image/png"
+          style={{ width: "100%", height: "auto" }}
+        />
+        <IconButton
+          color="primary"
+          onClick={handleCapture}
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "48px",
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
+            "&:hover": {
+              backgroundColor: "rgba(255, 255, 255, 1)",
+            },
+          }}
+        >
+          <CameraAltIcon sx={{ fontSize: "48px" }} />
+        </IconButton>
+      </Box>
       {capturedImage && (
         <Box sx={{ mt: 2 }}>
           <Typography variant="h6">Preview:</Typography>
@@ -63,6 +101,7 @@ const CameraCapture = ({ title, details, onCapture }) => {
   );
 };
 
+// Steps Config File
 const ObjectStep = ({ stepNumber, label, onCapture }) => (
   <CameraCapture
     title={`Step ${stepNumber} of 6: ${label}`}
@@ -72,9 +111,10 @@ const ObjectStep = ({ stepNumber, label, onCapture }) => (
 );
 
 const DrawingStep = ({ stepNumber, label, icon, onCapture }) => (
-  <div style={{ textAlign: "center" }}>
+  <Box sx={{ textAlign: "center" }}>
+    <Typography variant="h5">{label}</Typography>
     {icon}
-  </div>
+  </Box>
 );
 
 const objectSteps = [
@@ -179,6 +219,7 @@ export const stepsConfig = {
   drawing: drawingSteps,
 };
 
+// Main Journey Component
 const WorkFlow = ({ journeyType }) => {
   const [activeStep, setActiveStep] = useState(0);
   const theme = useTheme();
