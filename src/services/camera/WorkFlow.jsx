@@ -15,6 +15,11 @@ import {
 	useTheme,
 } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import UploadFileIcon from "@mui/icons-material/UploadFile";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import BrushIcon from "@mui/icons-material/Brush";
+import PlaceIcon from "@mui/icons-material/Place";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const CameraCapture = ({ title, details, onCapture }) => {
   const [devices, setDevices] = useState([]);
