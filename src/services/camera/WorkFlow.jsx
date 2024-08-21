@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 import {
-	Box,
-	IconButton,
-	MenuItem,
-	Select,
-	Typography,
-	Stepper,
-	Step,
-	StepLabel,
-	Container,
-	useMediaQuery,
-	Button,
-	useTheme,
+  Box,
+  IconButton,
+  MenuItem,
+  Select,
+  Typography,
+  Stepper,
+  Step,
+  StepLabel,
+  Container,
+  useMediaQuery,
+  Button,
+  useTheme,
 } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
@@ -30,7 +30,9 @@ const CameraCapture = ({ title, details, onCapture }) => {
   useEffect(() => {
     const getDevices = async () => {
       const devices = await navigator.mediaDevices.enumerateDevices();
-      const videoDevices = devices.filter(device => device.kind === "videoinput");
+      const videoDevices = devices.filter(
+        (device) => device.kind === "videoinput"
+      );
       setDevices(videoDevices);
       setSelectedDeviceId(videoDevices[0]?.deviceId || "");
     };
@@ -284,7 +286,9 @@ const WorkFlow = ({ journeyType }) => {
           {activeStep === steps.length - 1 ? (
             <Button onClick={handleReset}>Reset</Button>
           ) : (
-            <Button onClick={handleNext}>Next</Button>
+            <Button onClick={handleNext}>
+              {activeStep === steps.length - 1 ? "Finish" : "Next"}
+            </Button>
           )}
         </Box>
       </Box>
