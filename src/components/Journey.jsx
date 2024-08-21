@@ -70,7 +70,7 @@ const Journey = () => {
           mt: 4,
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           Journey
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>

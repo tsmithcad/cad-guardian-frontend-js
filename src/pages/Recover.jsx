@@ -28,7 +28,7 @@ const Recover = () => {
 						sx={{ textTransform: "uppercase", mb: 2 }}>
 						Recover Account
 					</Typography>
-					<Typography variant="h4" gutterBottom>
+					<Typography variant="h5" gutterBottom>
 						Forgot password?
 					</Typography>
 					<Typography variant="body1" color="textSecondary">

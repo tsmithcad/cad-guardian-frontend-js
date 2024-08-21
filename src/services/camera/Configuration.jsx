@@ -22,7 +22,7 @@ const DrawingStep = ({ stepNumber, label, icon, onFileUpload, uploadedFile }) =>
   });
 
   return (
-    <Box sx={{ textAlign: 'center', p: 3 }}>
+    <Box sx={{ textAlign: 'center' }}>
       <Typography variant="h5">{label}</Typography>
       <Box {...getRootProps()} sx={{ border: '2px dashed', p: 2, mt: 2 }}>
         <input {...getInputProps()} />
@@ -47,7 +47,7 @@ const DrawingStep = ({ stepNumber, label, icon, onFileUpload, uploadedFile }) =>
   );
 };
 
-// Steps Configurations
+// Steps Configurations for Object
 const objectSteps = [
   {
     label: "Front View",
@@ -87,6 +87,7 @@ const objectSteps = [
   },
 ];
 
+// Steps Configurations for Drawing
 const drawingSteps = [
   {
     label: 'Upload Drawing',

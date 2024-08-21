@@ -52,7 +52,7 @@ const CardGrid = ({ title, subtitle, data, iconMap }) => {
           bgcolor: "background.paper",
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           {title}
         </Typography>
         <Typography variant="body1" gutterBottom>

@@ -29,7 +29,7 @@ const Signup = () => {
 						sx={{ textTransform: "uppercase", mb: 2 }}>
 						Signup
 					</Typography>
-					<Typography variant="h4" gutterBottom>
+					<Typography variant="h5" gutterBottom>
 						Create an account
 					</Typography>
 					<Typography variant="body1" color="textSecondary">

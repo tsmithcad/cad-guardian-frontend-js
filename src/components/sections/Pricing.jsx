@@ -35,7 +35,7 @@ const Pricing = () => {
 					borderRadius: 4,
 					boxShadow: 3,
 				}}>
-				<Typography variant="h4" gutterBottom>
+				<Typography variant="h5" gutterBottom>
 					Pricing
 				</Typography>
 				<Typography variant="body1" gutterBottom>
@@ -81,7 +81,7 @@ const Pricing = () => {
 										sx={{ marginTop: 1 }}>
 										{plan.description}
 									</Typography>
-									<Typography variant="h4" sx={{ mt: 2, fontWeight: "bold" }}>
+									<Typography variant="h5" sx={{ mt: 2, fontWeight: "bold" }}>
 										{plan.price}
 									</Typography>
 									<Box sx={{ mt: 2 }}>

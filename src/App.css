@@ -14,3 +14,72 @@
 [data-theme='light'] {
   --svg-color: #000000;
 }
+
+/* Define font sizes for headers h1 - h6 */
+h1 {
+  font-size: 2rem; /* Large but not overwhelming */
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem; /* Slightly smaller */
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem; /* Noticeably smaller */
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem; /* Good for subheadings */
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.125rem; /* Smaller subheadings */
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem; /* Smallest heading */
+  font-weight: 500;
+}
+
+/* General text styles */
+body {
+  font-size: 1rem; /* Base font size */
+  line-height: 1.5; /* Good readability */
+}
+
+p {
+  font-size: 1rem; /* Paragraph text */
+  margin-bottom: 1.5rem; /* Spacing after paragraphs */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  h4 {
+    font-size: 1.125rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  h6 {
+    font-size: 0.875rem;
+  }
+}

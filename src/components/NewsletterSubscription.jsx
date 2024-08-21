@@ -13,7 +13,7 @@ const NewsletterSubscription = () => {
         borderRadius: '8px',
       }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Newsletter
       </Typography>
       <Typography variant="body1" gutterBottom sx={{ color: '#6c757d' }}>

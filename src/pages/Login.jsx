@@ -28,7 +28,7 @@ const Login = () => {
 						sx={{ textTransform: "uppercase", mb: 2 }}>
 						Login
 					</Typography>
-					<Typography variant="h4" gutterBottom>
+					<Typography variant="h5" gutterBottom>
 						Welcome back
 					</Typography>
 					<Typography variant="body1" color="textSecondary">

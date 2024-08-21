@@ -38,7 +38,7 @@ const Contact = () => {
 				<Grid container spacing={4}>
 					{/* Left Section */}
 					<Grid item xs={12} md={6}>
-						<Typography variant="h4" gutterBottom>
+						<Typography variant="h5" gutterBottom>
 							Contact
 						</Typography>
 						<Typography variant="body1" color="textSecondary" gutterBottom>

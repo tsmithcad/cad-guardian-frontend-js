@@ -38,7 +38,7 @@ const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
   };
 
   return (
-    <Box sx={{ textAlign: "center", p: 3 }}>
+    <Box sx={{ textAlign: "center"}}>
       <Typography variant="h5" gutterBottom>
         {title}
       </Typography>

@@ -64,7 +64,7 @@ const Market = () => {
 				boxShadow: 3,
 				borderRadius: 2,
 			}}>
-			<Typography variant="h4" sx={{ marginBottom: 2, textAlign: "center" }}>
+			<Typography variant="h5" sx={{ marginBottom: 2, textAlign: "center" }}>
 				Market
 			</Typography>
 			<Typography variant="body2" color="textSecondary" gutterBottom>

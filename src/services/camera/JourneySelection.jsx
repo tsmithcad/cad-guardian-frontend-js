@@ -20,31 +20,24 @@ const JourneySelection = () => {
 
   return (
     <Box sx={{
-      p: 3,
-      marginTop: 8,
-      boxShadow: 3,
-      borderRadius: 2,
+      marginTop: 2,
     }}>
-      <Typography variant="h4" sx={{ marginBottom: 1, textAlign: "center" }} gutterBottom>
-        Getting started
-      </Typography>
-      <Typography variant="body2" color="textSecondary" sx={{ textAlign: "center", mt:2, marginBottom:4 }} gutterBottom>
-        Do you have a object or drawing?
-      </Typography>
+
+
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={6} sm={6}>
           <JourneyOption
             title="Object"
-            description="Capture object from multiple angles."
+            description="Capture images."
             icon={WorkIcon}
             selected={journeyType === "object"}
             onClick={() => setJourneyType("object")}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={6} sm={6}>
           <JourneyOption
             title="Drawing"
-            description="Upload drawing images."
+            description="Upload drawings."
             icon={InsertDriveFileIcon}
             selected={journeyType === "drawing"}
             onClick={() => setJourneyType("drawing")}

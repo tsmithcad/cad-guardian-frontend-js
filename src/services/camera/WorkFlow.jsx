@@ -4,38 +4,57 @@ import { useTheme } from '@mui/material/styles';
 import { stepsConfig } from './Configuration';
 
 const WorkFlow = ({ journeyType }) => {
-  const [activeStep, setActiveStep] = useState(0);
+  // Maintain separate states for object and drawing steps
+  const [activeObjectStep, setActiveObjectStep] = useState(0);
+  const [activeDrawingStep, setActiveDrawingStep] = useState(0);
   const [capturedImages, setCapturedImages] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    if (journeyType === 'object') {
+      setActiveObjectStep((prevActiveStep) => prevActiveStep + 1);
+    } else {
+      setActiveDrawingStep((prevActiveStep) => prevActiveStep + 1);
+    }
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    if (journeyType === 'object') {
+      setActiveObjectStep((prevActiveStep) => prevActiveStep - 1);
+    } else {
+      setActiveDrawingStep((prevActiveStep) => prevActiveStep - 1);
+    }
   };
 
   const handleReset = () => {
-    setActiveStep(0);
-    setCapturedImages([]);
-    setUploadedFiles([]);
+    if (journeyType === 'object') {
+      setActiveObjectStep(0);
+      setCapturedImages([]);
+    } else {
+      setActiveDrawingStep(0);
+      setUploadedFiles([]);
+    }
   };
 
   const handleCapture = (image) => {
-    const updatedImages = [...capturedImages];
-    updatedImages[activeStep] = image;
-    setCapturedImages(updatedImages);
+    if (journeyType === 'object') {
+      const updatedImages = [...capturedImages];
+      updatedImages[activeObjectStep] = image;
+      setCapturedImages(updatedImages);
+    }
   };
 
   const handleFileUpload = (file) => {
-    const updatedFiles = [...uploadedFiles];
-    updatedFiles[activeStep] = file;
-    setUploadedFiles(updatedFiles);
+    if (journeyType === 'drawing') {
+      const updatedFiles = [...uploadedFiles];
+      updatedFiles[activeDrawingStep] = file;
+      setUploadedFiles(updatedFiles);
+    }
   };
 
+  const activeStep = journeyType === 'object' ? activeObjectStep : activeDrawingStep;
   const steps = journeyType === 'object' ? stepsConfig.object : stepsConfig.drawing;
   const StepContent = steps[activeStep].component;
 
@@ -60,9 +79,9 @@ const WorkFlow = ({ journeyType }) => {
         <Box sx={{ mb: 2 }}>
           <StepContent
             onCapture={handleCapture}
-            capturedImage={capturedImages[activeStep]}
+            capturedImage={journeyType === 'object' ? capturedImages[activeObjectStep] : null}
             onFileUpload={handleFileUpload}
-            uploadedFile={uploadedFiles[activeStep]}
+            uploadedFile={journeyType === 'drawing' ? uploadedFiles[activeDrawingStep] : null}
           />
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>

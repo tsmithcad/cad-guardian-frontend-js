@@ -41,7 +41,7 @@ const Testimonials = () => {
 
   return (
     <Box sx={{ borderRadius: 4, padding: 4, marginTop: 8, boxShadow: 3, }}>
-      <Typography variant="h4" textAlign="center" gutterBottom>
+      <Typography variant="h5" textAlign="center" gutterBottom>
         Testimonials
       </Typography>
       <Typography variant="body1" textAlign="center" gutterBottom>
