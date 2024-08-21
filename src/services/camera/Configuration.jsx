@@ -50,37 +50,37 @@ const DrawingStep = ({ stepNumber, label, icon, onFileUpload, uploadedFile }) =>
 // Steps Configurations for Object
 const objectSteps = [
   {
-    label: "Front View",
+    label: "Front",
     component: (props) => (
       <CameraCapture title="Front View" details="Capture the front view of the object." {...props} />
     ),
   },
   {
-    label: "Side View",
+    label: "Side",
     component: (props) => (
       <CameraCapture title="Side View" details="Capture the side view of the object." {...props} />
     ),
   },
   {
-    label: "Top View",
+    label: "Top",
     component: (props) => (
       <CameraCapture title="Top View" details="Capture the top view of the object." {...props} />
     ),
   },
   {
-    label: "Bottom View",
+    label: "Bottom",
     component: (props) => (
       <CameraCapture title="Bottom View" details="Capture the bottom view of the object." {...props} />
     ),
   },
   {
-    label: "Isometric View",
+    label: "Isometric",
     component: (props) => (
       <CameraCapture title="Isometric View" details="Capture the isometric view of the object." {...props} />
     ),
   },
   {
-    label: "Finalize Object",
+    label: "Finalize",
     component: (props) => (
       <CameraCapture title="Finalize Object" details="Capture any final views or notes for the object." {...props} />
     ),
@@ -90,7 +90,7 @@ const objectSteps = [
 // Steps Configurations for Drawing
 const drawingSteps = [
   {
-    label: 'Upload Drawing',
+    label: 'Upload',
     component: (props) => (
       <DrawingStep
         stepNumber={1}
@@ -101,7 +101,7 @@ const drawingSteps = [
     ),
   },
   {
-    label: 'Review Drawing',
+    label: 'Review',
     component: (props) => (
       <DrawingStep
         stepNumber={2}
@@ -112,7 +112,7 @@ const drawingSteps = [
     ),
   },
   {
-    label: 'Annotate Drawing',
+    label: 'Annotate',
     component: (props) => (
       <DrawingStep
         stepNumber={3}
@@ -134,7 +134,7 @@ const drawingSteps = [
     ),
   },
   {
-    label: 'Finalize Drawing',
+    label: 'Finalize',
     component: (props) => (
       <DrawingStep
         stepNumber={5}

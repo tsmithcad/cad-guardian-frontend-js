@@ -60,14 +60,14 @@ const WorkFlow = ({ journeyType }) => {
 
   return (
     <Container>
-      <Box sx={{ borderRadius: 2, boxShadow: 3, p: 4, mt: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Typography variant="h4" gutterBottom>
           {journeyType === 'object' ? 'Object Capture' : 'Drawing Upload'}
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
           {journeyType === 'object'
-            ? 'Follow these steps to capture all necessary views of your object.'
-            : 'Follow these steps to upload and process your drawing.'}
+            ? 'Follow steps to capture all views of your object.'
+            : 'Follow these steps to upload your drawing.'}
         </Typography>
         <Stepper activeStep={activeStep} orientation={isMobile ? 'vertical' : 'horizontal'} sx={{ mt: 3, mb: 3 }}>
           {steps.map((step, index) => (
