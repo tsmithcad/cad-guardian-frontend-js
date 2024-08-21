@@ -6,29 +6,7 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PlaceIcon from '@mui/icons-material/Place';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useDropzone } from 'react-dropzone';
-
-// Updated CameraCapture Component to handle image capture
-const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
-  // ... existing code
-
-  return (
-    <Box sx={{ textAlign: 'center', p: 3 }}>
-      <Typography variant="h5" gutterBottom>
-        {title}
-      </Typography>
-      <Typography variant="body2" color="textSecondary" gutterBottom>
-        {details}
-      </Typography>
-      {/* ... existing code for camera capture */}
-      {capturedImage && (
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="h6">Preview:</Typography>
-          <img src={capturedImage} alt="Captured" style={{ maxWidth: '100%' }} />
-        </Box>
-      )}
-    </Box>
-  );
-};
+import CameraCapture from './CameraCapture';
 
 // Helper function to format file size
 const formatFileSize = (size) => {
@@ -74,37 +52,37 @@ const objectSteps = [
   {
     label: "Front View",
     component: (props) => (
-      <CameraCapture stepNumber={1} label="Front View" {...props} />
+      <CameraCapture title="Front View" details="Capture the front view of the object." {...props} />
     ),
   },
   {
     label: "Side View",
     component: (props) => (
-      <CameraCapture stepNumber={2} label="Side View" {...props} />
+      <CameraCapture title="Side View" details="Capture the side view of the object." {...props} />
     ),
   },
   {
     label: "Top View",
     component: (props) => (
-      <CameraCapture stepNumber={3} label="Top View" {...props} />
+      <CameraCapture title="Top View" details="Capture the top view of the object." {...props} />
     ),
   },
   {
     label: "Bottom View",
     component: (props) => (
-      <CameraCapture stepNumber={4} label="Bottom View" {...props} />
+      <CameraCapture title="Bottom View" details="Capture the bottom view of the object." {...props} />
     ),
   },
   {
     label: "Isometric View",
     component: (props) => (
-      <CameraCapture stepNumber={5} label="Isometric View" {...props} />
+      <CameraCapture title="Isometric View" details="Capture the isometric view of the object." {...props} />
     ),
   },
   {
     label: "Finalize Object",
     component: (props) => (
-      <CameraCapture stepNumber={6} label="Finalize Object" {...props} />
+      <CameraCapture title="Finalize Object" details="Capture any final views or notes for the object." {...props} />
     ),
   },
 ];

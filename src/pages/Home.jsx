@@ -17,10 +17,10 @@ const Home = () => {
 
 	return (
 		<>
-			<Team />
 			<JourneySelection />
-			<Market />
-			<Clients />
+			{/* <Market /> */}
+			{/* <Clients /> */}
+			<Team />
 		</>
 	);
 };
