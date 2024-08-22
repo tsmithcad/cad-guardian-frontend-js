@@ -26,9 +26,6 @@ const TeamMemberCard = ({ name, role, socials, image }) => (
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "space-between",
-				padding: 4,
-				borderRadius: 2,
-				boxShadow: 3,
 				textAlign: "center",
 				height: "100%", // Ensures all cards have the same height
 			}}>
