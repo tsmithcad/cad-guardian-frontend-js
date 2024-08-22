@@ -16,7 +16,7 @@ const JourneyOption = ({ title, description, icon: Icon, selected, onClick }) =>
 );
 
 const JourneySelection = () => {
-  const [journeyType, setJourneyType] = useState(null);
+  const [journeyType, setJourneyType] = useState("object");
 
   return (
     <Box sx={{
@@ -24,7 +24,7 @@ const JourneySelection = () => {
     }}>
 
 
-      <Grid container spacing={2}>
+      {/* <Grid container spacing={2}>
         <Grid item xs={6} sm={6}>
           <JourneyOption
             title="Object"
@@ -43,7 +43,7 @@ const JourneySelection = () => {
             onClick={() => setJourneyType("drawing")}
           />
         </Grid>
-      </Grid>
+      </Grid> */}
       {journeyType && <WorkFlow journeyType={journeyType} />}
     </Box>
   );
