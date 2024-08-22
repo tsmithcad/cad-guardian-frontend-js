@@ -6,7 +6,8 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PlaceIcon from '@mui/icons-material/Place';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useDropzone } from 'react-dropzone';
-import CameraCapture from './CameraCapture';
+import { motion } from 'framer-motion';
+import CameraCapture from './CameraCapture'; // Assuming this component handles its own transitions
 
 // Helper function to format file size
 const formatFileSize = (size) => {
@@ -22,28 +23,34 @@ const DrawingStep = ({ stepNumber, label, icon, onFileUpload, uploadedFile }) =>
   });
 
   return (
-    <Box sx={{ textAlign: 'center' }}>
-      <Typography variant="h5">{label}</Typography>
-      <Box {...getRootProps()} sx={{ border: '2px dashed', p: 2, mt: 2 }}>
-        <input {...getInputProps()} />
-        <UploadFileIcon sx={{ fontSize: 48, color: 'primary.main' }} />
-        <Typography variant="body2" color="textSecondary">
-          Drag & drop a file here, or click to select a file
-        </Typography>
-      </Box>
-      {uploadedFile && (
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="h6">Uploaded File:</Typography>
-          <Typography variant="body2">{uploadedFile.name}</Typography>
-          <Typography variant="body2">
-            Size: {formatFileSize(uploadedFile.size)}
-          </Typography>
-          <Typography variant="body2">
-            Last Modified: {new Date(uploadedFile.lastModified).toLocaleString()}
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Box sx={{ textAlign: 'center' }}>
+        <Typography variant="h5">{label}</Typography>
+        <Box {...getRootProps()} sx={{ border: '2px dashed', p: 2, mt: 2 }}>
+          <input {...getInputProps()} />
+          <UploadFileIcon sx={{ fontSize: 48, color: 'primary.main' }} />
+          <Typography variant="body2" color="textSecondary">
+            Drag & drop a file here, or click to select a file
           </Typography>
         </Box>
-      )}
-    </Box>
+        {uploadedFile && (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h6">Uploaded File:</Typography>
+            <Typography variant="body2">{uploadedFile.name}</Typography>
+            <Typography variant="body2">
+              Size: {formatFileSize(uploadedFile.size)}
+            </Typography>
+            <Typography variant="body2">
+              Last Modified: {new Date(uploadedFile.lastModified).toLocaleString()}
+            </Typography>
+          </Box>
+        )}
+      </Box>
+    </motion.div>
   );
 };
 

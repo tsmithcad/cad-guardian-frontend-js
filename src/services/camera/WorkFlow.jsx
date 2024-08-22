@@ -4,11 +4,11 @@ import { useTheme } from '@mui/material/styles';
 import { stepsConfig } from './Configuration';
 
 const WorkFlow = ({ journeyType }) => {
-  // Maintain separate states for object and drawing steps
   const [activeObjectStep, setActiveObjectStep] = useState(0);
   const [activeDrawingStep, setActiveDrawingStep] = useState(0);
   const [capturedImages, setCapturedImages] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [cameraVisibility, setCameraVisibility] = useState(Array(stepsConfig.object.length).fill(true)); // State for camera visibility
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -32,6 +32,7 @@ const WorkFlow = ({ journeyType }) => {
     if (journeyType === 'object') {
       setActiveObjectStep(0);
       setCapturedImages([]);
+      setCameraVisibility(Array(stepsConfig.object.length).fill(true));
     } else {
       setActiveDrawingStep(0);
       setUploadedFiles([]);
@@ -52,6 +53,12 @@ const WorkFlow = ({ journeyType }) => {
       updatedFiles[activeDrawingStep] = file;
       setUploadedFiles(updatedFiles);
     }
+  };
+
+  const toggleCameraVisibility = (visible) => {
+    const updatedVisibility = [...cameraVisibility];
+    updatedVisibility[activeObjectStep] = visible;
+    setCameraVisibility(updatedVisibility);
   };
 
   const activeStep = journeyType === 'object' ? activeObjectStep : activeDrawingStep;
@@ -82,6 +89,8 @@ const WorkFlow = ({ journeyType }) => {
             capturedImage={journeyType === 'object' ? capturedImages[activeObjectStep] : null}
             onFileUpload={handleFileUpload}
             uploadedFile={journeyType === 'drawing' ? uploadedFiles[activeDrawingStep] : null}
+            showCamera={cameraVisibility[activeObjectStep]}
+            toggleCameraVisibility={toggleCameraVisibility}
           />
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>

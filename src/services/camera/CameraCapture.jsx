@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 import {
   Box,
@@ -11,11 +11,9 @@ import {
 } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 
-// CameraCapture Component
-const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
+const CameraCapture = ({ title, details, onCapture, capturedImage, showCamera, toggleCameraVisibility }) => {
   const [devices, setDevices] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState("");
-  const [showCamera, setShowCamera] = useState(true); // State to toggle camera visibility
   const webcamRef = useRef(null);
 
   useEffect(() => {
@@ -38,11 +36,7 @@ const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
   const handleCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     onCapture(imageSrc);
-    setShowCamera(false); // Hide camera after capture
-  };
-
-  const toggleCameraVisibility = () => {
-    setShowCamera(!showCamera);
+    toggleCameraVisibility(false); // Hide camera and select after capture
   };
 
   return (
@@ -53,21 +47,21 @@ const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
       <Typography variant="body2" color="textSecondary" gutterBottom>
         {details}
       </Typography>
-      {devices.length > 1 && (
-        <Select
-          value={selectedDeviceId}
-          onChange={handleDeviceChange}
-          sx={{ mb: 2 }}
-          fullWidth
-        >
-          {devices.map((device, index) => (
-            <MenuItem key={index} value={device.deviceId}>
-              {device.label || `Camera ${index + 1}`}
-            </MenuItem>
-          ))}
-        </Select>
-      )}
       <Collapse in={showCamera} sx={{ transition: "height 0.5s ease" }}>
+        {devices.length > 1 && (
+          <Select
+            value={selectedDeviceId}
+            onChange={handleDeviceChange}
+            sx={{ mb: 2 }}
+            fullWidth
+          >
+            {devices.map((device, index) => (
+              <MenuItem key={index} value={device.deviceId}>
+                {device.label || `Camera ${index + 1}`}
+              </MenuItem>
+            ))}
+          </Select>
+        )}
         <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
           <Webcam
             audio={false}
@@ -101,7 +95,7 @@ const CameraCapture = ({ title, details, onCapture, capturedImage }) => {
           <img src={capturedImage} alt="Captured" style={{ maxWidth: "100%" }} />
           <Button
             variant="contained"
-            onClick={toggleCameraVisibility}
+            onClick={() => toggleCameraVisibility(!showCamera)}
             sx={{ mt: 2 }}
           >
             {showCamera ? "Hide" : "Recapture Image"}

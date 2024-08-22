@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Box, Card, CardContent, Grid, Typography, Radio, IconButton } from "@mui/material";
-import WorkIcon from "@mui/icons-material/Work";
-import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import { Box, Card, CardContent, Typography, Radio } from "@mui/material";
+import { motion, AnimatePresence } from "framer-motion";
 import WorkFlow from "./WorkFlow";
 
 const JourneyOption = ({ title, description, icon: Icon, selected, onClick }) => (
@@ -19,32 +18,18 @@ const JourneySelection = () => {
   const [journeyType, setJourneyType] = useState("object");
 
   return (
-    <Box sx={{
-      marginTop: 2,
-    }}>
-
-
-      {/* <Grid container spacing={2}>
-        <Grid item xs={6} sm={6}>
-          <JourneyOption
-            title="Object"
-            description="Capture images."
-            icon={WorkIcon}
-            selected={journeyType === "object"}
-            onClick={() => setJourneyType("object")}
-          />
-        </Grid>
-        <Grid item xs={6} sm={6}>
-          <JourneyOption
-            title="Drawing"
-            description="Upload drawings."
-            icon={InsertDriveFileIcon}
-            selected={journeyType === "drawing"}
-            onClick={() => setJourneyType("drawing")}
-          />
-        </Grid>
-      </Grid> */}
-      {journeyType && <WorkFlow journeyType={journeyType} />}
+    <Box sx={{ marginTop: 2 }}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={journeyType}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+        >
+          {journeyType && <WorkFlow journeyType={journeyType} />}
+        </motion.div>
+      </AnimatePresence>
     </Box>
   );
 };
