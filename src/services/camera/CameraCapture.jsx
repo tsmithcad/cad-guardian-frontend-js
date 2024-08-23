@@ -11,7 +11,14 @@ import {
 } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 
-const CameraCapture = ({ title, details, onCapture, capturedImage, showCamera, toggleCameraVisibility }) => {
+const CameraCapture = ({
+  title,
+  details,
+  onCapture,
+  capturedImage,
+  showCamera,
+  toggleCameraVisibility,
+}) => {
   const [devices, setDevices] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState("");
   const webcamRef = useRef(null);
@@ -36,23 +43,24 @@ const CameraCapture = ({ title, details, onCapture, capturedImage, showCamera, t
   const handleCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     onCapture(imageSrc);
-    toggleCameraVisibility(false); // Hide camera and select after capture
+    toggleCameraVisibility(false); // Hide camera and select menu after capture
   };
 
   return (
-    <Box >
+    <Box sx={{ textAlign: "center", p: 2 }}>
       <Typography variant="h5" gutterBottom>
         {title}
       </Typography>
       <Typography variant="body2" color="textSecondary" gutterBottom>
         {details}
       </Typography>
+
       <Collapse in={showCamera} sx={{ transition: "height 0.5s ease" }}>
-        {devices.length > 1 && (
+        {showCamera && devices.length > 1 && (
           <Select
             value={selectedDeviceId}
             onChange={handleDeviceChange}
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, maxWidth: "100%" }}
             fullWidth
           >
             {devices.map((device, index) => (
@@ -62,33 +70,37 @@ const CameraCapture = ({ title, details, onCapture, capturedImage, showCamera, t
             ))}
           </Select>
         )}
-        <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
-          <Webcam
-            audio={false}
-            ref={webcamRef}
-            videoConstraints={{ deviceId: selectedDeviceId }}
-            screenshotFormat="image/png"
-            style={{ width: "100%", height: "auto" }}
-          />
-          <IconButton
-            color="primary"
-            onClick={handleCapture}
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "48px",
-              backgroundColor: "rgba(255, 255, 255, 0.7)",
-              "&:hover": {
-                backgroundColor: "rgba(255, 255, 255, 1)",
-              },
-            }}
-          >
-            <CameraAltIcon sx={{ fontSize: "48px" }} />
-          </IconButton>
-        </Box>
+
+        {showCamera && (
+          <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
+            <Webcam
+              audio={false}
+              ref={webcamRef}
+              videoConstraints={{ deviceId: selectedDeviceId }}
+              screenshotFormat="image/png"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <IconButton
+              color="primary"
+              onClick={handleCapture}
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                fontSize: "48px",
+                backgroundColor: "rgba(255, 255, 255, 0.7)",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 1)",
+                },
+              }}
+            >
+              <CameraAltIcon sx={{ fontSize: "48px" }} />
+            </IconButton>
+          </Box>
+        )}
       </Collapse>
+
       {capturedImage && (
         <Box sx={{ mt: 2 }}>
           <Typography variant="h6">Preview:</Typography>
