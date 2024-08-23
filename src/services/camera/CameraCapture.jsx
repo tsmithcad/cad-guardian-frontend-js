@@ -56,48 +56,54 @@ const CameraCapture = ({
       </Typography>
 
       <Collapse in={showCamera} sx={{ transition: "height 0.5s ease" }}>
-        {showCamera && devices.length > 1 && (
-          <Select
-            value={selectedDeviceId}
-            onChange={handleDeviceChange}
-            sx={{ mb: 2, maxWidth: "100%" }}
-            fullWidth
-          >
-            {devices.map((device, index) => (
-              <MenuItem key={index} value={device.deviceId}>
-                {device.label || `Camera ${index + 1}`}
-              </MenuItem>
-            ))}
-          </Select>
-        )}
-
         {showCamera && (
-          <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
-            <Webcam
-              audio={false}
-              ref={webcamRef}
-              videoConstraints={{ deviceId: selectedDeviceId }}
-              screenshotFormat="image/png"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <IconButton
-              color="primary"
-              onClick={handleCapture}
-              sx={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                fontSize: "48px",
-                backgroundColor: "rgba(255, 255, 255, 0.7)",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 1)",
-                },
-              }}
+          <>
+            <Select
+              value={selectedDeviceId}
+              onChange={handleDeviceChange}
+              sx={{ mb: 2, maxWidth: "100%" }}
+              fullWidth
             >
-              <CameraAltIcon sx={{ fontSize: "48px" }} />
-            </IconButton>
-          </Box>
+              {devices.length > 0 ? (
+                devices.map((device, index) => (
+                  <MenuItem key={index} value={device.deviceId}>
+                    {device.label || `Camera ${index + 1}`}
+                  </MenuItem>
+                ))
+              ) : (
+                <MenuItem value="" disabled>
+                  No cameras found
+                </MenuItem>
+              )}
+            </Select>
+
+            <Box sx={{ position: "relative", display: "inline-block", mb: 2 }}>
+              <Webcam
+                audio={false}
+                ref={webcamRef}
+                videoConstraints={{ deviceId: selectedDeviceId }}
+                screenshotFormat="image/png"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <IconButton
+                color="primary"
+                onClick={handleCapture}
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  fontSize: "48px",
+                  backgroundColor: "rgba(255, 255, 255, 0.7)",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 1)",
+                  },
+                }}
+              >
+                <CameraAltIcon sx={{ fontSize: "48px" }} />
+              </IconButton>
+            </Box>
+          </>
         )}
       </Collapse>
 
