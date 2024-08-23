@@ -83,10 +83,8 @@ const CameraCapture = ({
   };
 
   return (
-    <Box sx={{ textAlign: "center", p: 2 }}>
-      <Typography variant="h5" gutterBottom>
-        {title}
-      </Typography>
+    <Box sx={{ textAlign: "center" }}>
+      
       <Typography variant="body2" color="textSecondary" gutterBottom>
         {details}
       </Typography>
@@ -95,6 +93,7 @@ const CameraCapture = ({
         {showCamera && (
           <>
             <Select
+             size="small"
               value={selectedDeviceId}
               onChange={handleDeviceChange}
               onOpen={handleSelectOpen}

@@ -61,7 +61,7 @@ const WorkFlow = () => {
   return (
     <Container>
       <Box sx={{ mt: 4 }}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h6" gutterBottom>
           Object Capture
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
@@ -73,10 +73,11 @@ const WorkFlow = () => {
           <Box sx={{ mt: 3, mb: 3 }}>
             <LinearProgress variant="determinate" value={(activeStep / steps.length) * 100} />
             <Select
+             size="small"
               value={activeStep}
               onChange={(e) => setActiveObjectStep(e.target.value)}
               fullWidth
-              sx={{ mt: 2 }}
+              sx={{ mt: 2, }}
             >
               {steps.map((step, index) => (
                 <MenuItem key={index} value={index}>
@@ -95,16 +96,6 @@ const WorkFlow = () => {
             ))}
           </Stepper>
         )}
-        
-        <Box sx={{ mb: 2 }}>
-          <StepContent
-            onCapture={handleCapture}
-            capturedImage={capturedImages[activeObjectStep]}
-            imageInfo={imageInfos[activeObjectStep]} // Pass image info to StepContent
-            showCamera={cameraVisibility[activeObjectStep]}
-            toggleCameraVisibility={toggleCameraVisibility}
-          />
-        </Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button disabled={activeStep === 0} onClick={handleBack}>
             Back
@@ -117,6 +108,16 @@ const WorkFlow = () => {
             </Button>
           )}
         </Box>
+        <Box sx={{ mb: 2 }}>
+          <StepContent
+            onCapture={handleCapture}
+            capturedImage={capturedImages[activeObjectStep]}
+            imageInfo={imageInfos[activeObjectStep]} // Pass image info to StepContent
+            showCamera={cameraVisibility[activeObjectStep]}
+            toggleCameraVisibility={toggleCameraVisibility}
+          />
+        </Box>
+        
       </Box>
     </Container>
   );
