@@ -60,7 +60,7 @@ const Market = () => {
 		<Box
 			sx={{
 				p: 3,
-				marginTop: 8,
+				marginTop: 4,
 				boxShadow: 3,
 				borderRadius: 2,
 			}}>
@@ -68,12 +68,7 @@ const Market = () => {
 				Market
 			</Typography>
 			<Typography variant="body2" color="textSecondary" gutterBottom>
-				A comprehensive market analysis highlights a significant opportunity
-				within the manufacturing sector and related industries. By addressing
-				specific customer needs and leveraging trends like digital
-				transformation and AI, I intend to serve the largest international
-				companies and government entities, providing substantial value and
-				driving long-term growth.
+			Leveraging digital transformation and AI to address manufacturing needs, I plan to target major global companies and government entities for growth.
 			</Typography>
 			<Box sx={{ mb: 3, marginTop: 4 }}>
 				<TextField
@@ -89,7 +84,7 @@ const Market = () => {
 					Note: Information simplified for mobile view.
 				</Typography>
 			)}
-			<TableContainer component={Paper} sx={{ height: 500 }}>
+			<TableContainer component={Paper} sx={{ height: 600 }}>
 				<Table stickyHeader>
 					<TableHead>
 						<TableRow>

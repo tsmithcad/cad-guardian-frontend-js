@@ -3,7 +3,7 @@ import { Grid, Typography, Paper } from '@mui/material';
 
 const importAllLogos = async () => {
   const logos = [];
-  const context = import.meta.glob('../../assets/logos/*.svg', { eager: true });
+  const context = import.meta.glob('../../../assets/logos/*.svg', { eager: true });
   for (const path in context) {
     logos.push({ src: context[path].default, name: path.split('/').pop().split('.')[0] });
   }

@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import InfoIcon from "@mui/icons-material/Info";
 import LockResetIcon from "@mui/icons-material/LockReset";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
@@ -87,6 +88,11 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
           <LockResetIcon sx={{ mr: 1 }} />
           <Button sx={{ width: "100%", textTransform: 'none' }}>Recover</Button>
         </MenuItem>
+        <MenuItem onClick={() => handleNavigation("/about")}>
+  <InfoIcon sx={{ mr: 1 }} />
+  <Button sx={{ width: "100%", textTransform: 'none' }}>About</Button>
+</MenuItem>
+
       </Menu>
       <Typography
         sx={{
