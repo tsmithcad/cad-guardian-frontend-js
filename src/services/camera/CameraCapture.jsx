@@ -23,17 +23,19 @@ const CameraCapture = ({
   const [selectedDeviceId, setSelectedDeviceId] = useState("");
   const webcamRef = useRef(null);
 
-  useEffect(() => {
-    const getDevices = async () => {
-      const devices = await navigator.mediaDevices.enumerateDevices();
-      const videoDevices = devices.filter(
-        (device) => device.kind === "videoinput"
-      );
-      setDevices(videoDevices);
-      setSelectedDeviceId(videoDevices[0]?.deviceId || "");
-    };
+  const fetchDevices = async () => {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(
+      (device) => device.kind === "videoinput"
+    );
+    setDevices(videoDevices);
+    if (videoDevices.length > 0) {
+      setSelectedDeviceId(videoDevices[0].deviceId);
+    }
+  };
 
-    getDevices();
+  useEffect(() => {
+    fetchDevices();
   }, []);
 
   const handleDeviceChange = (event) => {
@@ -44,6 +46,12 @@ const CameraCapture = ({
     const imageSrc = webcamRef.current.getScreenshot();
     onCapture(imageSrc);
     toggleCameraVisibility(false); // Hide camera and select menu after capture
+  };
+
+  const handleSelectOpen = () => {
+    if (devices.length === 0) {
+      fetchDevices(); // Re-check for devices if the list is empty
+    }
   };
 
   return (
@@ -61,6 +69,7 @@ const CameraCapture = ({
             <Select
               value={selectedDeviceId}
               onChange={handleDeviceChange}
+              onOpen={handleSelectOpen}
               sx={{ mb: 2, maxWidth: "100%" }}
               fullWidth
             >
