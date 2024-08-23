@@ -2,7 +2,7 @@
 
 // system
 import React, { useState } from "react";
-import { CssBaseline, Box, Container, Button } from "@mui/material";
+import { CssBaseline, Box, Container } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // pages
@@ -27,16 +27,17 @@ function App({ toggleDarkMode }) {
 
 	return (
 		<Router>
-			<Routes>
-				<Route path="./a/login" element={<Login />} />
-				<Route path="/signup" element={<Signup />} />
-				<Route path="/recover" element={<Recover />} />
-			</Routes>
-
 			<Header
 				handleDrawerToggle={handleDrawerToggle}
 				toggleDarkMode={toggleDarkMode}
 			/>
+
+			<Routes>
+				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
+				<Route path="/recover" element={<Recover />} />
+				<Route path="/" element={<Home />} />
+			</Routes>
 
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
@@ -47,7 +48,6 @@ function App({ toggleDarkMode }) {
 				/>
 
 				<Container>
-					<Home />
 					<Footer />
 				</Container>
 			</Box>
