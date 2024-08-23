@@ -18,6 +18,7 @@ const CameraCapture = ({
   capturedImage,
   showCamera,
   toggleCameraVisibility,
+  imageInfo, // Prop for passing image information
 }) => {
   const [devices, setDevices] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState("");
@@ -44,7 +45,34 @@ const CameraCapture = ({
 
   const handleCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
-    onCapture(imageSrc);
+
+    if (imageSrc) {
+      // Convert data URL to Blob to get the file size
+      const byteString = atob(imageSrc.split(",")[1]);
+      const mimeString = imageSrc.split(",")[0].split(":")[1].split(";")[0];
+      const buffer = new ArrayBuffer(byteString.length);
+      const data = new Uint8Array(buffer);
+
+      for (let i = 0; i < byteString.length; i++) {
+        data[i] = byteString.charCodeAt(i);
+      }
+
+      const blob = new Blob([buffer], { type: mimeString });
+
+      // Generate a file name
+      const fileName = `captured-image-${Date.now()}.png`;
+
+      // Set the image information
+      const capturedImageInfo = {
+        size: (blob.size / 1024).toFixed(2), // Convert size to KB
+        type: mimeString,
+        name: fileName,
+      };
+
+      // Call the onCapture function with the image and its information
+      onCapture(imageSrc, capturedImageInfo);
+    }
+
     toggleCameraVisibility(false); // Hide camera and select menu after capture
   };
 
@@ -120,10 +148,17 @@ const CameraCapture = ({
         <Box sx={{ mt: 2 }}>
           <Typography variant="h6">Preview:</Typography>
           <img src={capturedImage} alt="Captured" style={{ maxWidth: "100%" }} />
+          {imageInfo && (
+            <Box sx={{ mt: 2 }}>
+              <Typography variant="body2">File Name: {imageInfo.name}</Typography>
+              <Typography variant="body2">File Type: {imageInfo.type}</Typography>
+              <Typography variant="body2">File Size: {imageInfo.size} KB</Typography>
+            </Box>
+          )}
           <Button
             variant="contained"
             onClick={() => toggleCameraVisibility(!showCamera)}
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, display: 'block', mx: 'auto' }} // Ensure the button is centered
           >
             {showCamera ? "Hide" : "Recapture Image"}
           </Button>

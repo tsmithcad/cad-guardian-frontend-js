@@ -15,56 +15,37 @@ import {
 import { useTheme } from '@mui/material/styles';
 import { stepsConfig } from './Configuration';
 
-const WorkFlow = ({ journeyType }) => {
+const WorkFlow = () => {
   const [activeObjectStep, setActiveObjectStep] = useState(0);
-  const [activeDrawingStep, setActiveDrawingStep] = useState(0);
   const [capturedImages, setCapturedImages] = useState([]);
-  const [uploadedFiles, setUploadedFiles] = useState([]);
-  const [cameraVisibility, setCameraVisibility] = useState(Array(stepsConfig.object.length).fill(true)); // State for camera visibility
+  const [imageInfos, setImageInfos] = useState([]); // Array to hold image info for each step
+  const [cameraVisibility, setCameraVisibility] = useState(Array(stepsConfig.object.length).fill(true));
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleNext = () => {
-    if (journeyType === 'object') {
-      setActiveObjectStep((prevActiveStep) => prevActiveStep + 1);
-    } else {
-      setActiveDrawingStep((prevActiveStep) => prevActiveStep + 1);
-    }
+    setActiveObjectStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const handleBack = () => {
-    if (journeyType === 'object') {
-      setActiveObjectStep((prevActiveStep) => prevActiveStep - 1);
-    } else {
-      setActiveDrawingStep((prevActiveStep) => prevActiveStep - 1);
-    }
+    setActiveObjectStep((prevActiveStep) => prevActiveStep - 1);
   };
 
   const handleReset = () => {
-    if (journeyType === 'object') {
-      setActiveObjectStep(0);
-      setCapturedImages([]);
-      setCameraVisibility(Array(stepsConfig.object.length).fill(true));
-    } else {
-      setActiveDrawingStep(0);
-      setUploadedFiles([]);
-    }
+    setActiveObjectStep(0);
+    setCapturedImages([]);
+    setImageInfos([]); // Reset image info
+    setCameraVisibility(Array(stepsConfig.object.length).fill(true));
   };
 
-  const handleCapture = (image) => {
-    if (journeyType === 'object') {
-      const updatedImages = [...capturedImages];
-      updatedImages[activeObjectStep] = image;
-      setCapturedImages(updatedImages);
-    }
-  };
+  const handleCapture = (image, imageInfo) => {
+    const updatedImages = [...capturedImages];
+    updatedImages[activeObjectStep] = image;
+    setCapturedImages(updatedImages);
 
-  const handleFileUpload = (file) => {
-    if (journeyType === 'drawing') {
-      const updatedFiles = [...uploadedFiles];
-      updatedFiles[activeDrawingStep] = file;
-      setUploadedFiles(updatedFiles);
-    }
+    const updatedImageInfos = [...imageInfos];
+    updatedImageInfos[activeObjectStep] = imageInfo;
+    setImageInfos(updatedImageInfos);
   };
 
   const toggleCameraVisibility = (visible) => {
@@ -73,20 +54,18 @@ const WorkFlow = ({ journeyType }) => {
     setCameraVisibility(updatedVisibility);
   };
 
-  const activeStep = journeyType === 'object' ? activeObjectStep : activeDrawingStep;
-  const steps = journeyType === 'object' ? stepsConfig.object : stepsConfig.drawing;
+  const activeStep = activeObjectStep;
+  const steps = stepsConfig.object;
   const StepContent = steps[activeStep].component;
 
   return (
     <Container>
       <Box sx={{ mt: 4 }}>
         <Typography variant="h5" gutterBottom>
-          {journeyType === 'object' ? 'Object Capture' : 'Drawing Upload'}
+          Object Capture
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
-          {journeyType === 'object'
-            ? 'Follow steps to capture all views of your object.'
-            : 'Follow these steps to upload your drawing.'}
+          Follow steps to capture all views of your object.
         </Typography>
         
         {/* Mobile View: Compact Stepper with Dropdown */}
@@ -95,13 +74,7 @@ const WorkFlow = ({ journeyType }) => {
             <LinearProgress variant="determinate" value={(activeStep / steps.length) * 100} />
             <Select
               value={activeStep}
-              onChange={(e) => {
-                if (journeyType === 'object') {
-                  setActiveObjectStep(e.target.value);
-                } else {
-                  setActiveDrawingStep(e.target.value);
-                }
-              }}
+              onChange={(e) => setActiveObjectStep(e.target.value)}
               fullWidth
               sx={{ mt: 2 }}
             >
@@ -126,9 +99,8 @@ const WorkFlow = ({ journeyType }) => {
         <Box sx={{ mb: 2 }}>
           <StepContent
             onCapture={handleCapture}
-            capturedImage={journeyType === 'object' ? capturedImages[activeObjectStep] : null}
-            onFileUpload={handleFileUpload}
-            uploadedFile={journeyType === 'drawing' ? uploadedFiles[activeDrawingStep] : null}
+            capturedImage={capturedImages[activeObjectStep]}
+            imageInfo={imageInfos[activeObjectStep]} // Pass image info to StepContent
             showCamera={cameraVisibility[activeObjectStep]}
             toggleCameraVisibility={toggleCameraVisibility}
           />
