@@ -80,7 +80,7 @@ const WorkFlow = ({ journeyType }) => {
   return (
     <Container>
       <Box sx={{ mt: 4 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           {journeyType === 'object' ? 'Object Capture' : 'Drawing Upload'}
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>

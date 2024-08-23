@@ -18,9 +18,6 @@ const Home = () => {
 	return (
 		<>
 			<JourneySelection />
-			{/* <Market /> */}
-			{/* <Clients /> */}
-			<Team />
 		</>
 	);
 };

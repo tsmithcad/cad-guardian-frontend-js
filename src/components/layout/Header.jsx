@@ -1,3 +1,5 @@
+// src/components/layout/Header.jsx
+
 import React, { useState } from "react";
 import {
   AppBar,

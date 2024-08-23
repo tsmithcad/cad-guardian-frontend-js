@@ -18,41 +18,39 @@ import NavigationDrawer from "./components/nav/NavigationDrawer";
 
 const drawerWidth = 240;
 
-function App({ toggleDarkMode }) {
-	const [mobileOpen, setMobileOpen] = useState(false);
+function App({ toggleDarkMode, isDarkMode }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-	const handleDrawerToggle = () => {
-		setMobileOpen(!mobileOpen);
-	};
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
-	return (
-		<Router>
-			<Header
-				handleDrawerToggle={handleDrawerToggle}
-				toggleDarkMode={toggleDarkMode}
-			/>
-
-			<Routes>
-				<Route path="/login" element={<Login />} />
-				<Route path="/signup" element={<Signup />} />
-				<Route path="/recover" element={<Recover />} />
-				<Route path="/" element={<Home />} />
-			</Routes>
-
-			<Box sx={{ display: "flex" }}>
-				<CssBaseline />
-				<NavigationDrawer
-					mobileOpen={mobileOpen}
-					handleDrawerToggle={handleDrawerToggle}
-					drawerWidth={drawerWidth}
-				/>
-
-				<Container>
-					<Footer />
-				</Container>
-			</Box>
-		</Router>
-	);
+  return (
+    <Router>
+      <Header
+        handleDrawerToggle={handleDrawerToggle}
+        toggleDarkMode={toggleDarkMode}
+        isDarkMode={isDarkMode}
+      />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/recover" element={<Recover />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <NavigationDrawer
+          mobileOpen={mobileOpen}
+          handleDrawerToggle={handleDrawerToggle}
+          drawerWidth={drawerWidth}
+        />
+        <Container>
+          <Footer />
+        </Container>
+      </Box>
+    </Router>
+  );
 }
 
 export default App;
