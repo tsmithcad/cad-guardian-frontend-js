@@ -60,7 +60,7 @@ const WorkFlow = () => {
 
   return (
     <Container>
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ mt: 2 }}>
         <Typography variant="h6" gutterBottom>
           Object Capture
         </Typography>
