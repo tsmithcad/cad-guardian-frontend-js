@@ -60,7 +60,7 @@ const Market = () => {
 		<Box
 			sx={{
 				p: 3,
-				marginTop: 4,
+				marginTop: 2,
 				boxShadow: 3,
 				borderRadius: 2,
 			}}>

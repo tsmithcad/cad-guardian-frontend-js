@@ -8,7 +8,6 @@ const ClientShowcase = () => (
 	<Container>
 		<Box
 			sx={{
-				mt: 4,
 				padding: 4,
 				borderRadius: 2,
 				boxShadow: 3,
