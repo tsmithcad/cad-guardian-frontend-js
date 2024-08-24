@@ -42,11 +42,7 @@ function App({ toggleDarkMode, isDarkMode }) {
 			</Routes>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
-				<NavigationDrawer
-					mobileOpen={mobileOpen}
-					handleDrawerToggle={handleDrawerToggle}
-					drawerWidth={drawerWidth}
-				/>
+				
 				<Container>
 					<Footer />
 				</Container>
