@@ -72,7 +72,7 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
           </Tooltip>
         </Box>
       </Toolbar>
-      <Typography variant="body2" component="div">
+      <Typography variant="body2" component="div" sx={{mx:"auto", color:"powderblue", marginBottom:1}}>
       Your AI-Powered Design Assistant
       </Typography>
       

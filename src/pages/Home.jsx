@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Typography, Tooltip } from "@mui/material";
 import { useDropzone } from "react-dropzone";
 import DrawingExamples from "../components/DrawingExamples";
+import cadImage from '../assets/img/cad-image.jpg';
 
 const Home = () => {
   const onDrop = (acceptedFiles) => {
@@ -24,14 +25,14 @@ const Home = () => {
       <Tooltip title="Easily convert your drawings into fully detailed CAD models and shop drawings.">
         <Box
           component="img"
-          src="https://via.placeholder.com/200"
+          src={cadImage}
           alt="Placeholder"
           sx={{
             mt: 5,
-            maxHeight: "200px",
+            maxHeight: "300px",
             width: "auto",
             mx: "auto",
-            height: "200px",
+            height: "300px",
             display: "block",
             borderRadius: 10, 
             border: "1px solid #ccc",
