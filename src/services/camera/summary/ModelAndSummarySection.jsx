@@ -23,7 +23,7 @@ const ModelAndSummarySection = ({ modelUrl, summary }) => {
         <Typography variant="h5" gutterBottom>
           3D Model Preview
         </Typography>
-        <ModelViewer modelUrl={modelUrl} />
+        {/* <ModelViewer modelUrl={modelUrl} /> */}
       </Box>
 
       {/* Summary Section */}

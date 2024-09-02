@@ -11,6 +11,7 @@ import {
   MenuItem,
   Button,
   Box,
+  Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
@@ -20,6 +21,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import LockResetIcon from "@mui/icons-material/LockReset";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
   const theme = useTheme();
@@ -49,18 +51,26 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
           onClick={handleMenuOpen}
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
+          <Tooltip title="Open User Menu">
+            <MenuIcon />
+          </Tooltip>
         </IconButton>
         <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-          CADGuardian.com
+          <strong>CAD GUARDIAN</strong>
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Typography variant="body1" sx={{ mr: 1 }}>
             Theme
           </Typography>
-          <Switch checked={isDarkMode} onChange={toggleDarkMode} />
+          <Tooltip title="Toggle Light/Dark Mode">
+            <Switch checked={isDarkMode} onChange={toggleDarkMode} />
+          </Tooltip>
         </Box>
       </Toolbar>
+      <Typography variant="body2" component="div" sx={{mx:"auto", py:1, px: 10, color:"black", background:"white" }}>
+      Your AI-Powered Design Assistant
+      </Typography>
+      
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
@@ -94,17 +104,6 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 </MenuItem>
 
       </Menu>
-      <Typography
-        sx={{
-          textAlign: "center",
-          fontStyle: "italic",
-          backgroundColor: "gray",
-          color: "white",
-          padding: "5px 0",
-        }}
-      >
-        "Use AI to create. From napkin to conception!"
-      </Typography>
     </AppBar>
   );
 };

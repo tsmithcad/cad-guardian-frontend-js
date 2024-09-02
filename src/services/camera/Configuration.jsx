@@ -1,13 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import BrushIcon from '@mui/icons-material/Brush';
-import PlaceIcon from '@mui/icons-material/Place';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useDropzone } from 'react-dropzone';
 import { motion } from 'framer-motion';
-import CameraCapture from './CameraCapture'; // Assuming this component handles its own transitions
+import CameraCapture from './CameraCapture'; 
+import SummaryDisplay from './summary/SummaryDisplay';
 
 // Helper function to format file size
 const formatFileSize = (size) => {
@@ -89,71 +86,11 @@ const objectSteps = [
   {
     label: "Finalize",
     component: (props) => (
-      <CameraCapture title="Finalize Object" details="Capture any final views or notes for the object." {...props} />
-    ),
-  },
-];
-
-// Steps Configurations for Drawing
-const drawingSteps = [
-  {
-    label: 'Upload',
-    component: (props) => (
-      <DrawingStep
-        stepNumber={1}
-        label="Upload Drawing"
-        icon={<UploadFileIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
-        {...props}
-      />
-    ),
-  },
-  {
-    label: 'Review',
-    component: (props) => (
-      <DrawingStep
-        stepNumber={2}
-        label="Review Drawing"
-        icon={<VisibilityIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
-        {...props}
-      />
-    ),
-  },
-  {
-    label: 'Annotate',
-    component: (props) => (
-      <DrawingStep
-        stepNumber={3}
-        label="Annotate Drawing"
-        icon={<BrushIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
-        {...props}
-      />
-    ),
-  },
-  {
-    label: 'Mark Key Points',
-    component: (props) => (
-      <DrawingStep
-        stepNumber={4}
-        label="Mark Key Points"
-        icon={<PlaceIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
-        {...props}
-      />
-    ),
-  },
-  {
-    label: 'Finalize',
-    component: (props) => (
-      <DrawingStep
-        stepNumber={5}
-        label="Finalize Drawing"
-        icon={<CheckCircleIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
-        {...props}
-      />
+      <SummaryDisplay/>
     ),
   },
 ];
 
 export const stepsConfig = {
   object: objectSteps,
-  drawing: drawingSteps,
 };
