@@ -29,10 +29,10 @@ const Home = () => {
           alt="Placeholder"
           sx={{
             mt: 5,
-            maxHeight: "300px",
+            maxHeight: "250px",
             width: "auto",
             mx: "auto",
-            height: "300px",
+            height: "250px",
             display: "block",
             borderRadius: 10, 
             border: "1px solid #ccc",
