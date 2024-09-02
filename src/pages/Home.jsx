@@ -40,7 +40,7 @@ const Home = () => {
         />
       </Tooltip>
 
-      <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold", mt: 4 }}>
+      <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold", mt: 4 }}>
         CAD Drawing Ai
       </Typography>
 
