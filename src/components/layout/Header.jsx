@@ -21,7 +21,6 @@ import InfoIcon from "@mui/icons-material/Info";
 import LockResetIcon from "@mui/icons-material/LockReset";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import { motion } from 'framer-motion';
 
 const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
   const theme = useTheme();
@@ -55,7 +54,13 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
             <MenuIcon />
           </Tooltip>
         </IconButton>
-        <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+        <Typography 
+  variant="h6" 
+  noWrap 
+  component="a" 
+  href="/" 
+  sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}
+>
           <strong>CAD GUARDIAN</strong>
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
