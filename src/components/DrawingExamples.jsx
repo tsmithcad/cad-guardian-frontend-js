@@ -12,7 +12,7 @@ const DrawingExamples = () => {
 				<Grid item>
 					<Box
 						component="img"
-						src="https://via.placeholder.com/320"
+						src="https://via.placeholder.com/50"
 						alt="Sample 1"
 						sx={{ width: 50, height: 50, borderRadius: 1 }}
 					/>
@@ -20,7 +20,7 @@ const DrawingExamples = () => {
 				<Grid item>
 					<Box
 						component="img"
-						src="https://via.placeholder.com/320"
+						src="https://via.placeholder.com/50"
 						alt="Sample 2"
 						sx={{ width: 50, height: 50, borderRadius: 1 }}
 					/>
@@ -28,7 +28,7 @@ const DrawingExamples = () => {
 				<Grid item>
 					<Box
 						component="img"
-						src="https://via.placeholder.com/320"
+						src="https://via.placeholder.com/50"
 						alt="Sample 2"
 						sx={{ width: 50, height: 50, borderRadius: 1 }}
 					/>
@@ -36,7 +36,7 @@ const DrawingExamples = () => {
 				<Grid item>
 					<Box
 						component="img"
-						src="https://via.placeholder.com/320"
+						src="https://via.placeholder.com/50"
 						alt="Sample 2"
 						sx={{ width: 50, height: 50, borderRadius: 1 }}
 					/>

@@ -24,22 +24,23 @@ const Home = () => {
       <Tooltip title="Easily convert your drawings into fully detailed CAD models and shop drawings.">
         <Box
           component="img"
-          src="https://via.placeholder.com/320"
+          src="https://via.placeholder.com/200"
           alt="Placeholder"
           sx={{
-            mt: 10,
-            maxWidth: "320px",
-            width: "100%",
+            mt: 5,
+            maxHeight: "200px",
+            width: "auto",
             mx: "auto",
-            height: "auto",
+            height: "200px",
             display: "block",
+            borderRadius: 10, 
             border: "1px solid #ccc",
           }}
         />
       </Tooltip>
 
       <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold", mt: 4 }}>
-        Upload Your Drawing to Begin CAD Automation
+        CAD Drawing Ai
       </Typography>
 
       <Typography

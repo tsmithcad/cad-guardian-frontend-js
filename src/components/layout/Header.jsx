@@ -59,7 +59,7 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
   noWrap 
   component="a" 
   href="/" 
-  sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}
+  sx={{ mx:"auto", textDecoration: 'none', color: 'inherit' }}
 >
           <strong>CAD GUARDIAN</strong>
         </Typography>
@@ -72,7 +72,7 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
           </Tooltip>
         </Box>
       </Toolbar>
-      <Typography variant="body2" component="div" sx={{mx:"auto", py:1, px: 10, color:"black", background:"white" }}>
+      <Typography variant="body2" component="div">
       Your AI-Powered Design Assistant
       </Typography>
       
