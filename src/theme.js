@@ -172,8 +172,23 @@ const darkTheme = createTheme({
         },
       },
     },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: darkThemeColors.background,
+        },
+        footer: {
+          backgroundColor: darkThemeColors.footerBackground,
+          color: darkThemeColors.footerText,
+          padding: '1rem', // Adjust padding as necessary
+          textAlign: 'center',
+          borderTop: `1px solid ${darkThemeColors.footerBorder}`,
+        },
+      },
+    },
   },
   svg: darkThemeColors.svg,
 });
+
 
 export { lightTheme, darkTheme };
