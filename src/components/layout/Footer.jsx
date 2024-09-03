@@ -1,21 +1,22 @@
 import React from 'react';
-import { Box, Typography, Link, Grid, useTheme } from '@mui/material';
+import { Box, Typography, Grid, useTheme } from '@mui/material';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const footerLinks = {
   "CADGuardian": {
     description: "Your AI-powered CAD automation platform, revolutionizing design-to-production workflows.",
   },
   "Explore": [
-    { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
-    { text: "Login", href: "/login" },
-    { text: "Sign Up", href: "/signup" },
-    { text: "Recover Account", href: "/recover" },
+    { text: "Home", to: "/" },
+    { text: "About", to: "/about" },
+    { text: "Login", to: "/login" },
+    { text: "Sign Up", to: "/signup" },
+    { text: "Recover Account", to: "/recover" },
   ],
   "Resources": [  // Added new Resources section
-    { text: "Backlinks", href: "/backlinks" },
-    { text: "Terms of Service", href: "/terms-of-service" },
-    { text: "Privacy Policy", href: "/privacy-policy" },
+    { text: "Backlinks", to: "/backlinks" },
+    { text: "Terms of Service", to: "/terms-of-service" },
+    { text: "Privacy Policy", to: "/privacy-policy" },
   ],
 };
 
@@ -46,14 +47,12 @@ const Footer = () => {
               footerLinks[section].map((link, linkIndex) => (
                 <Link
                   key={linkIndex}
-                  href={link.href}
-                  color="inherit"
-                  underline="hover"
-                  variant="body2"
-                  display="block"
-                  sx={{ my: 0.5 }}
+                  to={link.to} // Use "to" instead of "href"
+                  style={{ textDecoration: 'none', color: 'inherit' }} // Apply styling similar to Material-UI Link
                 >
-                  {link.text}
+                  <Typography variant="body2" sx={{ my: 0.5 }}>
+                    {link.text}
+                  </Typography>
                 </Link>
               ))
             )}
