@@ -18,9 +18,6 @@ import Backlinks from "./pages/Backlinks";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
-import NavigationDrawer from "./components/nav/NavigationDrawer";
-
-const drawerWidth = 240;
 
 function App({ toggleDarkMode, isDarkMode }) {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,8 +37,6 @@ function App({ toggleDarkMode, isDarkMode }) {
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/login" element={<Login />} />
-				<Route path="/recover" element={<Recover />} />
-				<Route path="/signup" element={<Signup />} />
 				<Route path="/terms-of-service" element={<TermsOfService />} />
 				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 				<Route path="/backlinks" element={<Backlinks />} />{" "}
@@ -49,7 +44,6 @@ function App({ toggleDarkMode, isDarkMode }) {
 			</Routes>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
-
 				<Container>
 					<Footer />
 				</Container>
