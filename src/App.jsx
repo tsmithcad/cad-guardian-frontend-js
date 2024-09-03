@@ -10,8 +10,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Recover from "./pages/Recover";
 import About from "./pages/About";
-import TermsOfService from './pages/TermsOfService';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Backlinks from "./pages/Backlinks";
 
 // components
 import Header from "./components/layout/Header";
@@ -42,8 +43,9 @@ function App({ toggleDarkMode, isDarkMode }) {
 				<Route path="/recover" element={<Recover />} />
 				<Route path="/signup" element={<Signup />} />
 				<Route path="/terms-of-service" element={<TermsOfService />} />
-				<Route path="/privacy-policy" element={<PrivacyPolicy />} />{" "}
-				{/* Added Privacy Policy Route */}
+				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
+				<Route path="/backlinks" element={<Backlinks />} />{" "}
+				{/* Added Backlinks Route */}
 			</Routes>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />

@@ -12,11 +12,13 @@ const footerLinks = {
     { text: "Sign Up", href: "/signup" },
     { text: "Recover Account", href: "/recover" },
   ],
-  "Legal": [
+  "Resources": [  // Added new Resources section
+    { text: "Backlinks", href: "/backlinks" },
     { text: "Terms of Service", href: "/terms-of-service" },
     { text: "Privacy Policy", href: "/privacy-policy" },
-  ]
+  ],
 };
+
 
 const Footer = () => (
   <Box sx={{ p: 3, mt: 'auto', backgroundColor: '#f8f9fa', color: '#6c757d', borderTop: '1px solid #e0e0e0' }}>
