@@ -8,7 +8,7 @@ import Market from "../components/sections/Market";
 const About = () => {
 	return (
 		<>
-		<Typography variant="h4" textAlign={"center"} sx={{m:4}}>Our Mission</Typography>
+		<Typography variant="h1" textAlign={"center"} sx={{m:4}}>Our Mission</Typography>
 		<Typography variant="body1" textAlign={"center"}>At CADGuardian, we're dedicated to making the design-to-production process faster, easier, and more accessible for everyone.</Typography>
 			<Team />
 			<Clients />

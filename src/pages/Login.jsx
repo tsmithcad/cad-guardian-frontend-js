@@ -23,12 +23,12 @@ const Login = () => {
 						bgcolor: "background.paper",
 					}}>
 					<Typography
-						variant="h6"
+						variant="h1"
 						component="div"
 						sx={{ textTransform: "uppercase", mb: 2 }}>
 						Login
 					</Typography>
-					<Typography variant="h5" gutterBottom>
+					<Typography variant="h2" gutterBottom>
 						Welcome back
 					</Typography>
 					<Typography variant="body1" color="textSecondary">

@@ -33,6 +33,15 @@ const darkThemeColors = {
 };
 
 const lightTheme = createTheme({
+  typography: {
+    h1: {
+      fontSize: '1.25rem', // Matching h5 size
+    },
+    h2: {
+      fontSize: '1rem', // Matching h6 size
+    },
+    // Optionally, you can also adjust other heading levels or styles here
+  },
   palette: {
     mode: 'light',
     primary: {
@@ -96,6 +105,15 @@ const lightTheme = createTheme({
 });
 
 const darkTheme = createTheme({
+  typography: {
+    h1: {
+      fontSize: '1.25rem', // Matching h5 size
+    },
+    h2: {
+      fontSize: '1rem', // Matching h6 size
+    },
+    // Optionally, you can also adjust other heading levels or styles here
+  },
   palette: {
     mode: 'dark',
     primary: {
