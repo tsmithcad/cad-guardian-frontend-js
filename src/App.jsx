@@ -37,13 +37,15 @@ function App({ toggleDarkMode, isDarkMode }) {
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/recover" element={<Recover />} />
+				<Route path="/signup" element={<Signup />} />
 				<Route path="/terms-of-service" element={<TermsOfService />} />
 				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 				<Route path="/backlinks" element={<Backlinks />} />{" "}
-				{/* Added Backlinks Route */}
 			</Routes>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
+
 				<Container>
 					<Footer />
 				</Container>
