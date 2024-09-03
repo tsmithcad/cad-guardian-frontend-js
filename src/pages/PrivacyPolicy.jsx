@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
           <li>Request the deletion of your personal information.</li>
         </Typography>
         <Typography variant="body1" gutterBottom>
-          To exercise these rights, please contact us at <Link href="mailto:support@cadguardian.com">support@cadguardian.com</Link>.
+          To exercise these rights, please contact us at <Link href="mailto:tsmithcad@gmail.com">tsmithcad@gmail.com</Link>.
         </Typography>
       </Box>
 
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
           7. Contact Us
         </Typography>
         <Typography variant="body1" gutterBottom>
-          If you have any questions or concerns about this Privacy Policy, please contact us at <Link href="mailto:support@cadguardian.com">support@cadguardian.com</Link>.
+          If you have any questions or concerns about this Privacy Policy, please contact us at <Link href="mailto:tsmithcad@gmail.com">tsmithcad@gmail.com</Link>.
         </Typography>
       </Box>
     </Container>

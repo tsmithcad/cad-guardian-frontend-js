@@ -73,7 +73,7 @@ const TermsOfService = () => {
           9. Contact Us
         </Typography>
         <Typography variant="body2" sx={{ mb: 2 }}>
-          If you have any questions about these Terms, please contact us at <Link href="mailto:support@cadguardian.com">support@cadguardian.com</Link>.
+          If you have any questions about these Terms, please contact us at <Link href="mailto:tsmithcad@gmail.com">tsmithcad@gmail.com</Link>.
         </Typography>
       </Box>
 
