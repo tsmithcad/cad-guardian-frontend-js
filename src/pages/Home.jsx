@@ -28,7 +28,7 @@ const Home = () => {
           src={cadImage}
           alt="Placeholder"
           sx={{
-            mt: 5,
+            mt: 2,
             maxHeight: "200px",
             width: "auto",
             mx: "auto",
@@ -47,7 +47,7 @@ const Home = () => {
       <Typography
         variant="body1"
         color="textSecondary"
-        sx={{ fontWeight: "bold", mt: 4 }}
+        sx={{ fontWeight: "bold", mt: 2 }}
         gutterBottom
       >
         100% Automatically and{" "}
@@ -85,6 +85,7 @@ const Home = () => {
         how we handle your personal data, check our{" "}
         <a href="/privacy-policy">Privacy Policy</a>.
       </Typography>
+
     </Box>
   );
 };
