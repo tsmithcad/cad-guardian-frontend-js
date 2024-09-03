@@ -2,55 +2,56 @@ import React from 'react';
 import { Box, Typography, Container, Link, Grid } from '@mui/material';
 
 const backlinks = {
-    "CAD Design and Modeling": [
-      {
-        text: "Top CAD Blogs and Forums",
-        description: "Explore the best CAD blogs and forums to stay updated with the latest trends, tips, and tutorials in CAD design and modeling.",
-        href: "https://www.cadalyst.com/", // Cadalyst - A leading authority on CAD news and tutorials.
-      },
-      {
-        text: "Leading CAD Software Providers",
-        description: "Learn about the top CAD software providers and their cutting-edge tools that revolutionize the design process.",
-        href: "https://www.autodesk.com/", // Autodesk - A leading provider of CAD software solutions like AutoCAD.
-      },
-    ],
-    "Artificial Intelligence in CAD": [
-      {
-        text: "AI and Machine Learning in Design",
-        description: "Discover how AI and machine learning are transforming CAD design, improving efficiency and accuracy.",
-        href: "https://blogs.nvidia.com/", // NVIDIA Blog - Covers AI and machine learning innovations, including in CAD.
-      },
-      {
-        text: "AI-Powered CAD Automation Tools",
-        description: "Explore AI-powered tools that automate the CAD workflow, saving time and reducing errors.",
-        href: "https://www.ptc.com/en/technologies/plm/cad", // PTC - Innovator in CAD and AI-powered tools like Creo.
-      },
-    ],
-    "Technology and Innovation": [
-      {
-        text: "Latest Trends in Technology",
-        description: "Stay informed about the latest trends and innovations in technology that impact the CAD industry.",
-        href: "https://www.techcrunch.com/", // TechCrunch - Leading source for technology news and analysis.
-      },
-      {
-        text: "Tech Conferences and Events",
-        description: "Find out about upcoming tech conferences and events where CAD and AI advancements are discussed.",
-        href: "https://conferences.oreilly.com/", // O'Reilly Conferences - Premier tech events including AI and CAD.
-      },
-    ],
-    "Educational Resources": [
-      {
-        text: "Online CAD Courses and Tutorials",
-        description: "Access a wealth of online courses and tutorials to enhance your CAD skills and knowledge.",
-        href: "https://www.lynda.com/CAD-training-tutorials/72-0.html", // LinkedIn Learning (formerly Lynda) - Extensive library of CAD courses.
-      },
-      {
-        text: "Books and Publications on CAD and AI",
-        description: "Explore books and publications that provide in-depth insights into CAD design and AI integration.",
-        href: "https://www.oreilly.com/", // O'Reilly Media - Leading publisher of CAD and AI books.
-      },
-    ],
-  };
+  "CAD Design and Modeling": [
+    {
+      text: "Top CAD Blogs and Forums",
+      description: "Explore the best CAD blogs and forums to stay updated with the latest trends, tips, and tutorials in CAD design and modeling.",
+      href: "https://www.cadalyst.com/", // Cadalyst - A leading authority on CAD news and tutorials.
+    },
+    {
+      text: "Leading CAD Software Providers",
+      description: "Learn about the top CAD software providers and their cutting-edge tools that revolutionize the design process.",
+      href: "https://www.autodesk.com/", // Autodesk - A leading provider of CAD software solutions like AutoCAD.
+    },
+  ],
+  "Artificial Intelligence in CAD": [
+    {
+      text: "AI and Machine Learning in Design",
+      description: "Discover how AI and machine learning are transforming CAD design, improving efficiency and accuracy.",
+      href: "https://blogs.nvidia.com/", // NVIDIA Blog - Covers AI and machine learning innovations, including in CAD.
+    },
+    {
+      text: "AI-Powered CAD Automation Tools",
+      description: "Explore AI-powered tools that automate the CAD workflow, saving time and reducing errors.",
+      href: "https://www.amd.com/", 
+    },
+  ],
+  "Technology and Innovation": [
+    {
+      text: "Latest Trends in Technology",
+      description: "Stay informed about the latest trends and innovations in technology that impact the CAD industry.",
+      href: "https://www.techcrunch.com/", // TechCrunch - Leading source for technology news and analysis.
+    },
+    {
+      text: "Tech Conferences and Events",
+      description: "Find out about upcoming tech conferences and events where CAD and AI advancements are discussed.",
+      href: "https://conferences.oreilly.com/", // O'Reilly Conferences - Premier tech events including AI and CAD.
+    },
+  ],
+  "Educational Resources": [
+    {
+      text: "Online CAD Courses and Tutorials",
+      description: "Access a wealth of online courses and tutorials to enhance your CAD skills and knowledge.",
+      href: "https://www.coursera.org/courses?query=cad", // Coursera - Offers a variety of CAD courses and certifications.
+    },
+    {
+      text: "Books and Publications on CAD and AI",
+      description: "Explore books and publications that provide in-depth insights into CAD design and AI integration.",
+      href: "https://www.oreilly.com/", // O'Reilly Media - Leading publisher of CAD and AI books.
+    },
+  ],
+};
+
   
 
 const Backlinks = () => (
