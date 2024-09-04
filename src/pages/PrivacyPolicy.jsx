@@ -1,8 +1,17 @@
 import React from 'react';
 import { Box, Typography, Container, Divider, Link } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
   return (
+    <>
+    <Helmet>
+        <title>Privacy Policy - CADGuardian</title>
+        <meta
+          name="description"
+          content="Learn about CADGuardian's commitment to protecting your privacy. Read our policy on data collection, usage, and security for all users."
+        />
+      </Helmet>
     <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
         Privacy Policy
@@ -100,6 +109,7 @@ const PrivacyPolicy = () => {
         </Typography>
       </Box>
     </Container>
+    </>
   );
 };
 

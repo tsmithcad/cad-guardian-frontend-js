@@ -1,15 +1,18 @@
 // src/components/Recover.jsx
 import React from "react";
-import {
-	Container,
-	TextField,
-	Typography,
-	Button,
-	Box,
-} from "@mui/material";
+import { Container, TextField, Typography, Button, Box } from "@mui/material";
+import { Helmet } from "react-helmet-async";
 
 const Recover = () => {
 	return (
+		<>
+			<Helmet>
+				<title>Recover Account - CADGuardian</title>
+				<meta
+					name="description"
+					content="Forgot your CADGuardian account password? Use our account recovery tool to reset your password and regain access to your AI-powered CAD tools."
+				/>
+			</Helmet>
 			<Container component="main" maxWidth="xs">
 				<Box
 					sx={{
@@ -60,6 +63,7 @@ const Recover = () => {
 					</Box>
 				</Box>
 			</Container>
+		</>
 	);
 };
 

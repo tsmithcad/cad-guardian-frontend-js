@@ -3,6 +3,7 @@ import { Box, Button, Typography, Tooltip } from "@mui/material";
 import { useDropzone } from "react-dropzone";
 import DrawingExamples from "../components/DrawingExamples";
 import cadImage from '../assets/img/cad-image.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const onDrop = (acceptedFiles) => {
@@ -21,6 +22,15 @@ const Home = () => {
   });
 
   return (
+
+    <>
+     <Helmet>
+        <title>CADGuardian - AI-Powered CAD Workflow Automation</title>
+        <meta
+          name="description"
+          content="Revolutionize your CAD workflows with CADGuardian's AI-powered automation. From concept to production, automate every step and streamline your design process."
+        />
+      </Helmet>
     <Box sx={{ textAlign: "center", p: 2, maxWidth: 320, mx: "auto" }}>
       <Tooltip title="Easily convert your drawings into fully detailed CAD models and shop drawings.">
         <Box
@@ -87,7 +97,8 @@ const Home = () => {
       </Typography>
 
     </Box>
-  );
+    
+</>  );
 };
 
 export default Home;

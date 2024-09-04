@@ -7,9 +7,18 @@ import {
 	Link,
 	Box,
 } from "@mui/material";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 	return (
+		<>
+			<Helmet>
+				<title>Login - CADGuardian</title>
+				<meta
+					name="description"
+					content="Log in to your CADGuardian account to access your AI-powered CAD tools. Start designing and automating your CAD workflows now."
+				/>
+			</Helmet>
 			<Container component="main" maxWidth="xs">
 				<Box
 					sx={{
@@ -87,6 +96,7 @@ const Login = () => {
 					</Box>
 				</Box>
 			</Container>
+		</>
 	);
 };
 
