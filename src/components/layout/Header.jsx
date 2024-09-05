@@ -111,7 +111,7 @@ const Header = ({ handleDrawerToggle, toggleDarkMode, isDarkMode }) => {
 				</MenuItem>
         <MenuItem onClick={() => handleNavigation("/technology-overview")}>
   <MemoryIcon sx={{ mr: 1 }} />
-  <Button sx={{ width: "100%", textTransform: "none" }}>Technology Overview</Button>
+  <Button sx={{ width: "100%", textTransform: "none" }}>Tech Overview</Button>
 </MenuItem>
 			</Menu>
 		</AppBar>
