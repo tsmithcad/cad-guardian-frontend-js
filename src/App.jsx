@@ -13,6 +13,7 @@ import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Backlinks from "./pages/Backlinks";
+import TechnologyOverview from "./pages/TechnologyOverview";
 
 // components
 import Header from "./components/layout/Header";
@@ -36,16 +37,16 @@ function App({ toggleDarkMode, isDarkMode }) {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
+				<Route path="/backlinks" element={<Backlinks />} />{" "}
 				<Route path="/login" element={<Login />} />
+				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 				<Route path="/recover" element={<Recover />} />
 				<Route path="/signup" element={<Signup />} />
+				<Route path="/technology-overview" element={<TechnologyOverview />} />
 				<Route path="/terms-of-service" element={<TermsOfService />} />
-				<Route path="/privacy-policy" element={<PrivacyPolicy />} />
-				<Route path="/backlinks" element={<Backlinks />} />{" "}
 			</Routes>
 			<Box sx={{ display: "flex" }}>
 				<CssBaseline />
-
 				<Container>
 					<Footer />
 				</Container>
