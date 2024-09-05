@@ -14,30 +14,39 @@ const Home = () => {
   const onDrop = async (acceptedFiles) => {
     setError("");  // Clear any previous errors
     setLoading(true);  // Start loading indicator
+
     try {
-      const file = acceptedFiles[0];  // Assuming only one file is uploaded
+        const file = acceptedFiles[0];  // Assuming only one file is uploaded
 
-      // Create FormData to send the file
-      const formData = new FormData();
-      formData.append('file', file);
+        // Create FormData to send the file
+        const formData = new FormData();
+        formData.append('file', file);
 
-      // Send the file to the backend
-      const response = await axios.post('https://localhost:5001/openai/upload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+        // Send the file to the backend
+        const response = await axios.post('http://localhost:5001/openai/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
 
-      // Get summary from the response
-      const { summary } = response.data;
-      setSummary(summary);  // Display the summary to the user
+        // Get summary from the response
+        const { summary } = response.data;
+        setSummary(summary);  // Display the summary to the user
     } catch (err) {
-      console.error("Error uploading the file:", err);
-      setError("Failed to summarize the file. Please try again.");
+        // Check if there's a response from the backend
+        if (err.response) {
+            // Handle specific error responses from the backend
+            const { message, errorCode } = err.response.data;
+            setError(`Error: ${message} (Code: ${errorCode})`);
+        } else {
+            // Handle network or unexpected errors
+            setError("Failed to summarize the file. Please try again.");
+        }
     } finally {
-      setLoading(false);  // Stop loading indicator
+        setLoading(false);  // Stop loading indicator
     }
-  };
+};
+
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,

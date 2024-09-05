@@ -4,7 +4,7 @@ import { Box, Typography, Tooltip, Grid } from "@mui/material";
 const DrawingExamples = () => {
 	return (
 		<>
-			<Typography variant="body2" gutterBottom>
+			<Typography variant="body2" marginTop={2}  gutterBottom>
 			Supported formats: DWG, DXF, STEP, PDF, JPG. No drawing? Try one of these:
 			</Typography>
 
